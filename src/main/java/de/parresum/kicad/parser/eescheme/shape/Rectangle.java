@@ -23,6 +23,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * defines a graphical rectangle in a symbol definition.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -30,9 +33,15 @@ import lombok.Setter;
 @EqualsAndHashCode(callSuper = true)
 public class Rectangle extends AbstractShape {
 
+   /**
+    * upper left corner of the box
+    */
    @SExprSymbol("start")
    private Position startPosition;
 
+   /**
+    * lower right corner of the box
+    */
    @SExprSymbol("end")
    private Position endPosition;
 

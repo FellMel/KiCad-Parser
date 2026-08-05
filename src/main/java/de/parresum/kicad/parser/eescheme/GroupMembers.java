@@ -24,6 +24,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Members of a group
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -31,6 +34,9 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class GroupMembers {
 
+   /**
+    * List of UUIDs of the members
+    */
    @SExprParameter(-1)
    private List<String> members;
 

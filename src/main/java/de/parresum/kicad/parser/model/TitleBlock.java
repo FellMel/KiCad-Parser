@@ -24,6 +24,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * defines the content of the title block
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -31,18 +34,33 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class TitleBlock {
 
+   /**
+    * Document title
+    */
    @SExprSymbol("title")
    private String title;
 
+   /**
+    * Document date in format YYYY-MM-DD
+    */
    @SExprSymbol("date")
    private String date;
 
+   /**
+    * Document revision
+    */
    @SExprSymbol("rev")
    private String revision;
 
+   /**
+    * Document company name
+    */
    @SExprSymbol("company")
    private String company;
 
+   /**
+    * one to nine comments to the document
+    */
    @SExprSymbol("comment")
    private List<Comment> comments;
 

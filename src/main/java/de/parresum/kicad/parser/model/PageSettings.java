@@ -22,6 +22,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Defines the drawing page size and orientation
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -29,15 +32,27 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class PageSettings {
 
+   /**
+    * predefined paper size
+    */
    @SExprParameter(1)
    private PaperSizeType paperSize;
 
+   /**
+    * alternate paper width
+    */
    @SExprParameter(2)
    private Double width;
 
+   /**
+    * alternate paper height
+    */
    @SExprParameter(3)
    private Double height;
 
+   /**
+    * switch between portrait and ladscape
+    */
    @SExprParameter(4)
    private Boolean portrait;
 

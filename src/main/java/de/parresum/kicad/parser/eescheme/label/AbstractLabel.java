@@ -27,24 +27,40 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Base of some labels
+ */
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
 public class AbstractLabel {
+
+   /**
+    * The Text is a quoted string that defines the label.
+    */
    @SExprParameter(1)
    private String text;
 
+   /**
+    * The UUID defines the universally unique identifier for the label.
+    */
    @SExprSymbol("uuid")
    private UUID uuid;
 
+   /**
+    * The Position defines the X and Y coordinates and rotation angle of the label.
+    */
    @SExprSymbol("at")
    private PositionAt position;
 
    @SExprSymbol(value = "fields_autoplaced", symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE)
    private boolean fieldsAutoplaced;
 
+   /**
+    * The TextEffects defines how the label text is drawn.
+    */
    @SExprSymbol("effects")
    private TextEffects textEffects;
 

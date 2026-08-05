@@ -25,6 +25,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * The junction defines a junction in the schematic.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -32,15 +35,29 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class Junction {
 
+   /**
+    * The UNIQUE_IDENTIFIER defines the universally unique identifier for the junction.
+    */
    @SExprSymbol("uuid")
    private UUID uuid;
 
+   /**
+    * The POSITION_IDENTIFIER defines the X and Y coordinates of the junction.
+    */
    @SExprSymbol("at")
    private Position position;
 
+   /**
+    * The diameter token attribute defines the DIAMETER of the junction. A diameter of 0 is the default diameter in the
+    * system settings.
+    */
    @SExprSymbol("diameter")
    private double diameter;
 
+   /**
+    * The color token attributes define the Red, Green, Blue, and Alpha transparency of the junction. If all four
+    * attributes are 0, the default junction color is used.
+    */
    @SExprSymbol("color")
    private Color color;
 

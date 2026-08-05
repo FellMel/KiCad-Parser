@@ -22,18 +22,31 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * defines the justify of a text
+ */
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
 public class Justify {
+
+   /**
+    * horizontal alignment. default is center
+    */
    @SExprParameter(1)
-   private HorizontalAlignment horitontalAllignment;
+   private HorizontalAlignment horitontalAlignment;
 
+   /**
+    * vertical alignment. default is center
+    */
    @SExprParameter(2)
-   private VerticalAlignment verticalAllignment;
+   private VerticalAlignment verticalAlignment;
 
+   /**
+    * defines, whether the text is mirrored
+    */
    @SExprParameter(3)
    private JustifyMirror mirror;
 

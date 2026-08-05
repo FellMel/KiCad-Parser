@@ -24,6 +24,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * The NoConnect defines a unused pin connection in the schematic.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -31,9 +34,15 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class NoConnect {
 
+   /**
+    * The UNIQUE_IDENTIFIER defines the universally unique identifier for the no connect.
+    */
    @SExprSymbol("uuid")
    private UUID uuid;
 
+   /**
+    * The POSITION_IDENTIFIER defines the X and Y coordinates of the no connect.
+    */
    @SExprSymbol("at")
    private PositionAt position;
 

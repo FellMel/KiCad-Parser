@@ -15,6 +15,9 @@
  */
 package de.parresum.kicad.parser.eescheme;
 
+/**
+ * Defines some types of Pin-Shapes
+ */
 public enum ShapeType {
    INPUT, OUTPUT, BIDIRECTIONAL, TRI_STATE, PASSIVE, ROUND;
 

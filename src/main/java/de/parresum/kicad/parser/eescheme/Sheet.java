@@ -30,6 +30,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * The Sheet defines a hierarchical sheet of the schematic.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -40,9 +43,15 @@ public class Sheet {
    @SExprSymbol("uuid")
    private UUID uuid;
 
+   /**
+    * The at attribute defines the X and Y coordinates and angle of rotation of the sheet in the schematic.
+    */
    @SExprSymbol("at")
    private PositionAt at;
 
+   /**
+    * The size attributes define the WIDTH and HEIGHT of the sheet.
+    */
    @SExprSymbol("size")
    private Size size;
 
@@ -58,21 +67,39 @@ public class Sheet {
    @SExprSymbol("dnp")
    private boolean dnp;
 
+   /**
+    * The optional fieldsAutoplaced indicates if the properties have been automatically placed.
+    */
    @SExprSymbol(value = "fields_autoplaced", symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE)
    private boolean fieldsAutoplaced;
 
+   /**
+    * The stroke defines how the sheet outline is drawn.
+    */
    @SExprSymbol("stroke")
    private Stroke stroke;
 
+   /**
+    * The fill defines how the sheet is filled.
+    */
    @SExprSymbol("fill")
    private Fill fill;
 
+   /**
+    * The properties defines the name and the fileName of the sheet. This properties are mandatory.
+    */
    @SExprSymbol("property")
    private List<Property> properties;
 
+   /**
+    * The pins is a list of hierarchical pins that map a hierarchical label defined in the associated schematic file.
+    */
    @SExprSymbol("pin")
    private List<Pin> pins;
 
+   /**
+    * The instances defines a list of sheet instances grouped by project. Every sheet will have a least one instance.
+    */
    @SExprSymbol("instances")
    private List<Instance> instances;
 

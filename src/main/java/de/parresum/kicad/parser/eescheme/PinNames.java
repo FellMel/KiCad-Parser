@@ -32,9 +32,16 @@ import lombok.Setter;
 @SExprModel(order = { "offset", "hide" })
 public class PinNames {
 
+   /**
+    * The optional offset defines the pin name offset for all pin names of the symbol. If not defined, the pin name
+    * offset is 0.508mm (0.020").
+    */
    @SExprSymbol("offset")
    private double offset;
 
+   /**
+    *
+    */
    @SExprParameter(value = 1, parameterMappings = { "hide" })
    @SExprSymbol(value = "hide")
    private boolean hide;

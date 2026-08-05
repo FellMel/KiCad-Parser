@@ -24,7 +24,6 @@ import org.junit.jupiter.api.Test;
 import de.parresum.kicad.parser.model.ListModel;
 import de.parresum.kicad.parser.model.SubModel;
 import de.parresum.kicad.parser.model.TestModel;
-import de.parresum.kicad.parser.sexpr.SExpressionWriter;
 import de.parresum.kicad.parser.sexpr.reflection.SExprClassHelper;
 
 public class TestWriter {
@@ -35,7 +34,7 @@ public class TestWriter {
       test.setFlo(3.1415);
       test.setVal(9955);
       test.setYes(false);
-      test.setWelt("Greetings\nto all");
+      test.setWorld("Greetings\nto all");
 
       final SubModel sub = new SubModel();
       sub.setId("uuid");
@@ -43,12 +42,12 @@ public class TestWriter {
       test.setSub(sub);
 
       final ListModel list1 = new ListModel();
-      list1.setId("kai");
-      list1.setName("uwe");
+      list1.setId("albert");
+      list1.setName("einstein");
 
       final ListModel list2 = new ListModel();
-      list2.setId("manu");
-      list2.setName("sigrid");
+      list2.setId("marie");
+      list2.setName("curie");
 
       final List<ListModel> list = new ArrayList<>();
       list.add(list1);

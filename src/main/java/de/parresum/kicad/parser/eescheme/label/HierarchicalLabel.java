@@ -23,6 +23,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * The HierarchicalLabel defines labels that are used by hierarchical sheets to define connections between sheet in
+ * hierarchical designs.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -30,6 +34,9 @@ import lombok.Setter;
 @EqualsAndHashCode(callSuper = true)
 public class HierarchicalLabel extends AbstractLabel {
 
+   /**
+    * The shape attribute defines the way the hierarchical label is drawn.
+    */
    @SExprSymbol("shape")
    private ShapeType shape;
 

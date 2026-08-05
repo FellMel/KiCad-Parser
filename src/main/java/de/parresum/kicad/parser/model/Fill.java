@@ -22,6 +22,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Defines a fill type
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -29,9 +32,15 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class Fill {
 
+   /**
+    * fill type
+    */
    @SExprSymbol("type")
    private FillType type;
 
+   /**
+    * color to use for filling
+    */
    @SExprSymbol("color")
    private Color color;
 

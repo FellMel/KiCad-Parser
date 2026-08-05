@@ -24,18 +24,30 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * defines a group of items
+ */
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
 public class Group {
+   /**
+    * name of the broup
+    */
    @SExprParameter(1)
    private String name;
 
+   /**
+    * id of the group
+    */
    @SExprSymbol("uuid")
    private UUID uuid;
 
+   /**
+    * members of the group
+    */
    @SExprSymbol("members")
    private GroupMembers members;
 

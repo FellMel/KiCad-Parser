@@ -25,6 +25,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * The Label defines an wire or bus label name in a schematic.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -33,6 +36,6 @@ import lombok.Setter;
 public class Label extends AbstractLabel {
 
    @SExprSymbol("property")
-   private List<Property> properties; // sym
+   private List<Property> properties;
 
 }

@@ -26,6 +26,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * The BusEntry defines a bus entry in the schematic.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -33,15 +36,27 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class BusEntry {
 
+   /**
+    * The UUID defines the universally unique identifier for the bus entry.
+    */
    @SExprSymbol("uuid")
    private UUID uuid;
 
+   /**
+    * The position defines the X and Y coordinates of the bus entry.
+    */
    @SExprSymbol("at")
    private PositionAt position;
 
+   /**
+    * The size token attributes define the X and Y distance of the end point from the position of the bus entry.
+    */
    @SExprSymbol("size")
    private Size size;
 
+   /**
+    * The stroke defines how the bus entry is drawn.
+    */
    @SExprSymbol("stroke")
    private Stroke stroke;
 

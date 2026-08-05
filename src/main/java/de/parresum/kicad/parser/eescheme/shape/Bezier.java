@@ -23,12 +23,20 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * defines a graphical Qubic Bezier curve.
+ * 
+ * 
+ */
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 public class Bezier extends AbstractShape {
+   /**
+    * defines the four X/Y coordinates of each point of the curve.
+    */
    @SExprSymbol("pts")
    private PointList points;
 

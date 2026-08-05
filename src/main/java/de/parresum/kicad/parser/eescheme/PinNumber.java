@@ -34,6 +34,9 @@ import lombok.Setter;
 @EqualsAndHashCode
 
 public class PinNumber {
+   /**
+    * Number of the pin
+    */
    @SExprParameter(1)
    private String name;
 
@@ -41,6 +44,9 @@ public class PinNumber {
    @SExprSymbol(value = "hide", symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE)
    private boolean hide;
 
+   /**
+    * defines how the number is displayed.
+    */
    @SExprSymbol("effects")
    private TextEffects effects;
 

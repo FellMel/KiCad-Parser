@@ -32,9 +32,15 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class Project {
 
+   /**
+    * Name of the project.
+    */
    @SExprParameter(1)
    private String name;
 
+   /**
+    * The path attribute is the path to the sheet instance for the instance data.
+    */
    @SExprSymbol("path")
    private List<Path> paths;
 

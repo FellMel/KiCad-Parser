@@ -15,6 +15,9 @@
  */
 package de.parresum.kicad.parser.model;
 
+/**
+ * Defines how a text is displayed.
+ */
 import de.parresum.kicad.parser.annotations.SExprParameter;
 import de.parresum.kicad.parser.annotations.SExprSymbol;
 import de.parresum.kicad.parser.annotations.SExprSymbolType;
@@ -31,12 +34,21 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class TextEffects {
 
+   /**
+    * Font to used for the text
+    */
    @SExprSymbol("font")
    private Font font;
 
+   /**
+    * Justify of the text
+    */
    @SExprSymbol("justify")
    private Justify justify;
 
+   /**
+    * defines, whether the text is hidden
+    */
    @SExprParameter(value = 1, parameterMappings = { "hide" })
    @SExprSymbol(value = "hide", parameterMappings = { "hide" }, symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE)
    private boolean hide;

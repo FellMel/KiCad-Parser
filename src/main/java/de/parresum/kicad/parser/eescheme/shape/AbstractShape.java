@@ -26,18 +26,31 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Base of all graphical shapes
+ */
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
 public class AbstractShape {
+
+   /**
+    * ID of the shape
+    */
    @SExprSymbol("uuid")
    private UUID uuid;
 
+   /**
+    * Stroke definition to draw the shape
+    */
    @SExprSymbol("stroke")
    private Stroke stroke;
 
+   /**
+    * Defines how the shape is filled
+    */
    @SExprSymbol("fill")
    private Fill fill;
 

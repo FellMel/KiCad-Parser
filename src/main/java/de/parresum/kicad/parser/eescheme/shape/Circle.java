@@ -23,6 +23,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Defines a circle element
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -30,9 +33,15 @@ import lombok.Setter;
 @EqualsAndHashCode(callSuper = true)
 public class Circle extends AbstractShape {
 
+   /**
+    * center position of the circle
+    */
    @SExprSymbol("center")
    private PositionAt center;
 
+   /**
+    * radius of the circle
+    */
    @SExprSymbol("radius")
    public double radius;
 

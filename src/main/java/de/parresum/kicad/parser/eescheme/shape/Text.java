@@ -25,6 +25,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * defines graphical text in a symbol definition.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -32,12 +35,21 @@ import lombok.Setter;
 @EqualsAndHashCode(callSuper = true)
 public class Text extends AbstractShape {
 
+   /**
+    * Text to draw
+    */
    @SExprParameter(1)
    private String text;
 
+   /**
+    * Position of the text
+    */
    @SExprSymbol("at")
    private PositionAt position;
 
+   /**
+    * Defines how the text is displayed
+    */
    @SExprSymbol("effects")
    private TextEffects textEffects;
 

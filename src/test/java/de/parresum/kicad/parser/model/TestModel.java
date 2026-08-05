@@ -19,7 +19,11 @@ import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprParameter;
 import de.parresum.kicad.parser.annotations.SExprSymbol;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class TestModel {
 
    @SExprParameter(1)
@@ -29,7 +33,7 @@ public class TestModel {
    private double flo;
 
    @SExprParameter(3)
-   private String welt;
+   private String world;
 
    @SExprParameter(4)
    private boolean yes;
@@ -40,51 +44,4 @@ public class TestModel {
    @SExprSymbol("list")
    private List<ListModel> list;
 
-   public int getVal() {
-      return val;
-   }
-
-   public void setVal(final int val) {
-      this.val = val;
-   }
-
-   public double getFlo() {
-      return flo;
-   }
-
-   public void setFlo(final double flo) {
-      this.flo = flo;
-   }
-
-   public String getWelt() {
-      return welt;
-   }
-
-   public void setWelt(final String welt) {
-      this.welt = welt;
-   }
-
-   public boolean isYes() {
-      return yes;
-   }
-
-   public void setYes(final boolean yes) {
-      this.yes = yes;
-   }
-
-   public SubModel getSub() {
-      return sub;
-   }
-
-   public void setSub(final SubModel sub) {
-      this.sub = sub;
-   }
-
-   public List<ListModel> getList() {
-      return list;
-   }
-
-   public void setList(final List<ListModel> list) {
-      this.list = list;
-   }
 }

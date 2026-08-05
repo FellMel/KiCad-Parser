@@ -24,6 +24,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * The Path is the path to the sheet instance for the instance data.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -36,9 +39,16 @@ public class Path {
    @SExprSymbol("uuid")
    private UUID uuid;
 
+   /**
+    * The reference attribute is a string that defines the reference designator for the symbol instance.
+    */
    @SExprSymbol("reference")
    private String reference;
 
+   /**
+    * The unit attribute is a integer ordinal that defines the symbol unit for the symbol instance. For symbols that do
+    * not define multiple units, this will always be 1.
+    */
    @SExprSymbol("unit")
    private Integer unit;
 

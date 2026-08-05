@@ -29,6 +29,10 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class Instance {
 
+   /**
+    * The project attribute defines the name of the project to which the instance data belongs. There can be instance
+    * data from other project when schematics are shared across multiple projects.
+    */
    @SExprSymbol("project")
    private Project project;
 

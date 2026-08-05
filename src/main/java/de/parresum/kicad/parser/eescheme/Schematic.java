@@ -15,6 +15,9 @@
  */
 package de.parresum.kicad.parser.eescheme;
 
+/**
+ * A Schematic.
+ */
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprSymbol;
@@ -47,15 +50,27 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class Schematic {
 
+   /**
+    * The version token attribute defines the schematic version using the YYYYMMDD date format.
+    */
    @SExprSymbol("version")
    private String version;
 
+   /**
+    * The generator token attribute defines the program used to write the file.
+    */
    @SExprSymbol("generator")
    private String generator;
 
+   /**
+    * Version of the generator using the YYYYMMDD date format.
+    */
    @SExprSymbol("generator_version")
    private String generatorVersion;
 
+   /**
+    * The uuid token defines the globally unique identifier that identifies the schematic.
+    */
    @SExprSymbol("uuid")
    private UUID uuid;
 
@@ -71,21 +86,42 @@ public class Schematic {
    @SExprSymbol("title_block")
    private TitleBlock titleBlock;
 
+   /**
+    * The lib_symbols token defines a symbol library contain all of the symbols used in the schematic.
+    */
    @SExprSymbol("lib_symbols")
    private LibSymbol libSymbols;
 
+   /**
+    * The junction token defines a junction in the schematic. The junction section will not exist if there are no
+    * junctions in the schematic.
+    */
    @SExprSymbol("junction")
    private List<Junction> junctions;
 
+   /**
+    * The no_connect token defines a unused pin connection in the schematic. The no connect section will not exist if
+    * there are not any no connects in the schematic.
+    */
    @SExprSymbol("no_connect")
    private List<NoConnect> noConnects;
 
+   /**
+    * The bus_entry token defines a bus entry in the schematic. The bus entry section will not exist if there are no bus
+    * entries in the schematic.
+    */
    @SExprSymbol("bus_entry")
    private List<BusEntry> busEntries;
 
+   /**
+    * The wire tokens define wires in the schematic. This section will not exist if there are no wires in the schematic.
+    */
    @SExprSymbol("wire")
    private List<Wire> wires;
 
+   /**
+    * The bus tokens define buses in the schematic. This section will not exist if there are no buses in the schematic.
+    */
    @SExprSymbol("bus")
    private List<Bus> buses;
 
@@ -95,6 +131,10 @@ public class Schematic {
    @SExprSymbol("image")
    private List<Image> images;
 
+   /**
+    * The polyline token defines one or more lines that may or may not represent a polygon. This section will not exist
+    * if there are no lines in the schematic.
+    */
    @SExprSymbol("polyline")
    private List<Polyline> polylines;
 
@@ -113,6 +153,9 @@ public class Schematic {
    @SExprSymbol("text_box")
    private List<TextBox> textBoxes;
 
+   /**
+    * The text token defines graphical text in a schematic.
+    */
    @SExprSymbol("text")
    private List<Text> texts;
 
@@ -122,18 +165,36 @@ public class Schematic {
    @SExprSymbol("table")
    private List<Table> tables;
 
+   /**
+    * The label token defines an wire or bus label name in a schematic.
+    */
    @SExprSymbol("label")
    private List<Label> localLabels;
 
+   /**
+    * The global_label token defines a label name that is visible across all schematics in a design. This section will
+    * not exist if no global labels are defined in the schematic.
+    */
    @SExprSymbol("global_label")
    private List<GlobalLabel> globalLabels;
 
+   /**
+    * The hierarchical_label section defines labels that are used by hierarchical sheets to define connections between
+    * sheet in hierarchical designs. This section will not exist if no global labels are defined in the schematic.
+    */
    @SExprSymbol("hierarchical_label")
    private List<HierarchicalLabel> hierarchicalLabels;
 
+   /**
+    * The symbol token in the symbol section of the schematic defines an instance of a symbol from the library symbol
+    * section of the schematic.
+    */
    @SExprSymbol("symbol")
    private List<Symbol> symbols;
 
+   /**
+    * The sheet token defines a hierarchical sheet of the schematic.
+    */
    @SExprSymbol("sheet")
    private List<Sheet> sheets;
 

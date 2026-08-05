@@ -25,6 +25,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * an embedded image.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -32,18 +35,33 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class Image {
 
+   /**
+    * ID of the image
+    */
    @SExprSymbol("uuid")
    private UUID uuid;
 
+   /**
+    * Position and orientation of the image
+    */
    @SExprSymbol("at")
    private PositionAt position;
 
+   /**
+    * a factor to scale the image
+    */
    @SExprSymbol("scale")
    private Double scaleFactor;
 
+   /**
+    * Board layer containing the image
+    */
    @SExprSymbol("layer")
    private LayerType layer;
 
+   /**
+    * Data of the image in PNG, Base64 encoded
+    */
    @SExprSymbol("data") // KicadParserSymbolSetType.TreatParametersAsOneString
    private ImageData imageData;
 

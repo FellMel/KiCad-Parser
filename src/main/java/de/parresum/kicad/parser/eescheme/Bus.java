@@ -25,6 +25,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * The Bus define buses in the schematic.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -32,12 +35,21 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class Bus {
 
+   /**
+    * The UUID defines the universally unique identifier for the bus.
+    */
    @SExprSymbol("uuid")
    private UUID uuid;
 
+   /**
+    * The points defines the list of X and Y coordinates of start and end points of the bus.
+    */
    @SExprSymbol("pts")
    private PointList pointList;
 
+   /**
+    * The Stroke defines how the bus is drawn.
+    */
    @SExprSymbol("stroke")
    private Stroke stroke;
 

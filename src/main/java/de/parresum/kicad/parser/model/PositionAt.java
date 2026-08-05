@@ -22,6 +22,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Defienes position and orientation of an object
+ */
 @Getter
 @Setter
 @NoArgsConstructor

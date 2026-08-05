@@ -23,6 +23,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Defines the position of an object
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -31,9 +34,15 @@ import lombok.ToString;
 @ToString
 public class Position {
 
+   /**
+    * X-coordinate of the object in mm
+    */
    @SExprParameter(1)
    private double x;
 
+   /**
+    * Y-coordinate of the object in mm
+    */
    @SExprParameter(2)
    private double y;
 

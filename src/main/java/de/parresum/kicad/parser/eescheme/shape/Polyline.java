@@ -23,6 +23,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * defines one or more graphical lines that may or may not define a polygon.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -30,6 +33,9 @@ import lombok.Setter;
 @EqualsAndHashCode(callSuper = true)
 public class Polyline extends AbstractShape {
 
+   /**
+    * coordinates of the outline
+    */
    @SExprSymbol("pts")
    private PointList points;
 

@@ -639,16 +639,16 @@ public class IncDecTest {
       assertEquals("0b9f8f1d-1af7-4787-9e73-206242382253", label.getUuid().getUuid());
       assertEquals(new PositionAt(125.73, 57.15, 180.0), label.getPosition());
       assertEquals(size, label.getTextEffects().getFont().getSize());
-      assertEquals(HorizontalAlignment.RIGHT, label.getTextEffects().getJustify().getHoritontalAllignment());
-      assertEquals(VerticalAlignment.BOTTOM, label.getTextEffects().getJustify().getVerticalAllignment());
+      assertEquals(HorizontalAlignment.RIGHT, label.getTextEffects().getJustify().getHoritontalAlignment());
+      assertEquals(VerticalAlignment.BOTTOM, label.getTextEffects().getJustify().getVerticalAlignment());
 
       label = labels.get(1);
       assertEquals("dec0", label.getText());
       assertEquals("8efbf2ce-efe7-4c0f-aebe-fa9e77541156", label.getUuid().getUuid());
       assertEquals(new PositionAt(127.0, 35.56, 180.0), label.getPosition());
       assertEquals(size, label.getTextEffects().getFont().getSize());
-      assertEquals(HorizontalAlignment.RIGHT, label.getTextEffects().getJustify().getHoritontalAllignment());
-      assertEquals(VerticalAlignment.BOTTOM, label.getTextEffects().getJustify().getVerticalAllignment());
+      assertEquals(HorizontalAlignment.RIGHT, label.getTextEffects().getJustify().getHoritontalAlignment());
+      assertEquals(VerticalAlignment.BOTTOM, label.getTextEffects().getJustify().getVerticalAlignment());
 
    }
 
@@ -663,8 +663,8 @@ public class IncDecTest {
       assertEquals(true, label.isFieldsAutoplaced());
       assertEquals(new PositionAt(92.71, 24.13, 180.0), label.getPosition());
       assertEquals(size, label.getTextEffects().getFont().getSize());
-      assertEquals(HorizontalAlignment.RIGHT, label.getTextEffects().getJustify().getHoritontalAllignment());
-      assertEquals(null, label.getTextEffects().getJustify().getVerticalAllignment());
+      assertEquals(HorizontalAlignment.RIGHT, label.getTextEffects().getJustify().getHoritontalAlignment());
+      assertEquals(null, label.getTextEffects().getJustify().getVerticalAlignment());
       checkProperty(label.getProperties().get(0), "Intersheetrefs", "${INTERSHEET_REFS}",
             new PositionAt(74.9083, 24.13, 0.0), false, false, true, size);
 
@@ -675,8 +675,8 @@ public class IncDecTest {
       assertEquals(true, label.isFieldsAutoplaced());
       assertEquals(new PositionAt(181.61, 52.07, 0.0), label.getPosition());
       assertEquals(size, label.getTextEffects().getFont().getSize());
-      assertEquals(HorizontalAlignment.LEFT, label.getTextEffects().getJustify().getHoritontalAllignment());
-      assertEquals(null, label.getTextEffects().getJustify().getVerticalAllignment());
+      assertEquals(HorizontalAlignment.LEFT, label.getTextEffects().getJustify().getHoritontalAlignment());
+      assertEquals(null, label.getTextEffects().getJustify().getVerticalAlignment());
       checkProperty(label.getProperties().get(0), "Intersheetrefs", "${INTERSHEET_REFS}",
             new PositionAt(200.6816, 52.07, 0.0), false, false, true, size);
 
@@ -687,8 +687,8 @@ public class IncDecTest {
       assertEquals(true, label.isFieldsAutoplaced());
       assertEquals(new PositionAt(92.71, 55.88, 180.0), label.getPosition());
       assertEquals(size, label.getTextEffects().getFont().getSize());
-      assertEquals(HorizontalAlignment.RIGHT, label.getTextEffects().getJustify().getHoritontalAllignment());
-      assertEquals(null, label.getTextEffects().getJustify().getVerticalAllignment());
+      assertEquals(HorizontalAlignment.RIGHT, label.getTextEffects().getJustify().getHoritontalAlignment());
+      assertEquals(null, label.getTextEffects().getJustify().getVerticalAlignment());
       checkProperty(label.getProperties().get(0), "Intersheetrefs", "${INTERSHEET_REFS}",
             new PositionAt(79.8672, 55.88, 0.0), false, false, true, size);
 
@@ -699,8 +699,8 @@ public class IncDecTest {
       assertEquals(true, label.isFieldsAutoplaced());
       assertEquals(new PositionAt(181.61, 63.5, 0.0), label.getPosition());
       assertEquals(size, label.getTextEffects().getFont().getSize());
-      assertEquals(HorizontalAlignment.LEFT, label.getTextEffects().getJustify().getHoritontalAllignment());
-      assertEquals(null, label.getTextEffects().getJustify().getVerticalAllignment());
+      assertEquals(HorizontalAlignment.LEFT, label.getTextEffects().getJustify().getHoritontalAlignment());
+      assertEquals(null, label.getTextEffects().getJustify().getVerticalAlignment());
       checkProperty(label.getProperties().get(0), "Intersheetrefs", "${INTERSHEET_REFS}",
             new PositionAt(204.0076, 63.5, 0.0), false, false, true, size);
 
@@ -711,8 +711,8 @@ public class IncDecTest {
       assertEquals(true, label.isFieldsAutoplaced());
       assertEquals(new PositionAt(92.71, 29.21, 180.0), label.getPosition());
       assertEquals(size, label.getTextEffects().getFont().getSize());
-      assertEquals(HorizontalAlignment.RIGHT, label.getTextEffects().getJustify().getHoritontalAllignment());
-      assertEquals(null, label.getTextEffects().getJustify().getVerticalAllignment());
+      assertEquals(HorizontalAlignment.RIGHT, label.getTextEffects().getJustify().getHoritontalAlignment());
+      assertEquals(null, label.getTextEffects().getJustify().getVerticalAlignment());
       checkProperty(label.getProperties().get(0), "Intersheetrefs", "${INTERSHEET_REFS}",
             new PositionAt(84.6449, 29.21, 0.0), false, false, true, size);
 
@@ -723,8 +723,8 @@ public class IncDecTest {
       assertEquals(true, label.isFieldsAutoplaced());
       assertEquals(new PositionAt(181.61, 30.48, 0.0), label.getPosition());
       assertEquals(size, label.getTextEffects().getFont().getSize());
-      assertEquals(HorizontalAlignment.LEFT, label.getTextEffects().getJustify().getHoritontalAllignment());
-      assertEquals(null, label.getTextEffects().getJustify().getVerticalAllignment());
+      assertEquals(HorizontalAlignment.LEFT, label.getTextEffects().getJustify().getHoritontalAlignment());
+      assertEquals(null, label.getTextEffects().getJustify().getVerticalAlignment());
       checkProperty(label.getProperties().get(0), "Intersheetrefs", "${INTERSHEET_REFS}",
             new PositionAt(190.945, 30.48, 0.0), false, false, true, size);
 
@@ -735,8 +735,8 @@ public class IncDecTest {
       assertEquals(true, label.isFieldsAutoplaced());
       assertEquals(new PositionAt(92.71, 43.18, 180.0), label.getPosition());
       assertEquals(size, label.getTextEffects().getFont().getSize());
-      assertEquals(HorizontalAlignment.RIGHT, label.getTextEffects().getJustify().getHoritontalAllignment());
-      assertEquals(null, label.getTextEffects().getJustify().getVerticalAllignment());
+      assertEquals(HorizontalAlignment.RIGHT, label.getTextEffects().getJustify().getHoritontalAlignment());
+      assertEquals(null, label.getTextEffects().getJustify().getVerticalAlignment());
       checkProperty(label.getProperties().get(0), "Intersheetrefs", "${INTERSHEET_REFS}",
             new PositionAt(84.6449, 43.18, 0.0), false, false, true, size);
 
@@ -747,8 +747,8 @@ public class IncDecTest {
       assertEquals(true, label.isFieldsAutoplaced());
       assertEquals(new PositionAt(181.61, 41.91, 0.0), label.getPosition());
       assertEquals(size, label.getTextEffects().getFont().getSize());
-      assertEquals(HorizontalAlignment.LEFT, label.getTextEffects().getJustify().getHoritontalAllignment());
-      assertEquals(null, label.getTextEffects().getJustify().getVerticalAllignment());
+      assertEquals(HorizontalAlignment.LEFT, label.getTextEffects().getJustify().getHoritontalAlignment());
+      assertEquals(null, label.getTextEffects().getJustify().getVerticalAlignment());
       checkProperty(label.getProperties().get(0), "Intersheetrefs", "${INTERSHEET_REFS}",
             new PositionAt(190.945, 41.91, 0.0), false, false, true, size);
 

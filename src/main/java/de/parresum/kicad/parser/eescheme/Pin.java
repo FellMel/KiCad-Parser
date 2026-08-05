@@ -27,6 +27,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * defines a pin in a symbol definition.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -34,18 +37,35 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class Pin {
 
+   /**
+    * The name attribute defines the name of the pin. It must have an identically named hierarchical label in the
+    * associated schematic file.
+    */
    @SExprParameter(1)
    private String name;
 
+   /**
+    * defines the pin electrical connection.
+    */
    @SExprParameter(2)
    private PinType electricalPinType;
 
+   /**
+    * defines the graphical style used to draw the pin.
+    */
    @SExprParameter(3)
    private PinShapeType graphicPinShape;
 
+   /**
+    * The UUID defines the universally unique identifier for the pin.
+    */
    @SExprSymbol("uuid")
    private UUID uuid;
 
+   /**
+    * defines the X and Y coordinates and rotation angle of the connection point of the pin relative to the symbol
+    * origin position. The only supported rotation angles for pins are 0, 90, 180, and 270 degrees.
+    */
    @SExprSymbol("at")
    private PositionAt position;
 
@@ -53,15 +73,24 @@ public class Pin {
    @SExprSymbol(value = "hide", symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE)
    private boolean hide;
 
+   /**
+    * defines the length of the pin.
+    */
    @SExprSymbol("length")
    private Double length;
 
+   /**
+    * containing the name of the pin
+    */
    @SExprSymbol("name")
    private PinName pinName;
 
    @SExprSymbol("number")
    private PinNumber pinNumber;
 
+   /**
+    * defines how the text is displayed.
+    */
    @SExprSymbol("effects")
    private TextEffects effects;
 

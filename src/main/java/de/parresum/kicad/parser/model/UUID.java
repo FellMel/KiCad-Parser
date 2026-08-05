@@ -23,6 +23,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * A uuid to identify some elements within the document
+ */
 @Getter
 @Setter
 @NoArgsConstructor

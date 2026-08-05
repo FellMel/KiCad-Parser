@@ -23,6 +23,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Defines an arc
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -30,12 +33,21 @@ import lombok.Setter;
 @EqualsAndHashCode(callSuper = true)
 public class Arc extends AbstractShape {
 
+   /**
+    * start position of the arc
+    */
    @SExprSymbol("start")
    private PositionAt startPosition;
 
+   /**
+    * midpoint of the arc
+    */
    @SExprSymbol("mid")
    private PositionAt midPosition;
 
+   /**
+    * end position of the arc
+    */
    @SExprSymbol("end")
    private PositionAt endPosition;
 

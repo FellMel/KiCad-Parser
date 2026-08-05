@@ -25,6 +25,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * The Wire define wires in the schematic.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -32,12 +35,21 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class Wire {
 
+   /**
+    * The UUID defines the universally unique identifier for the wire.
+    */
    @SExprSymbol("uuid")
    private UUID uuid;
 
+   /**
+    * The points defines the list of X and Y coordinates of start and end points of the wire.
+    */
    @SExprSymbol("pts")
    private PointList points;
 
+   /**
+    * The Stroke defines how the wire is drawn.
+    */
    @SExprSymbol("stroke")
    private Stroke stroke;
 

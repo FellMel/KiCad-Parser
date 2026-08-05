@@ -27,6 +27,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * The GlobalLabel defines a label name that is visible across all schematics in a design.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -44,9 +47,16 @@ import lombok.Setter;
 })
 public class GlobalLabel extends AbstractLabel {
 
+   /**
+    * The properties defines the properties of the global label. Currently, the only supported property is the
+    * inter-sheet reference.
+    */
    @SExprSymbol("property")
    private List<Property> properties;
 
+   /**
+    * The shape attribute defines the way the global label is drawn.
+    */
    @SExprSymbol("shape")
    private ShapeType shape;
 

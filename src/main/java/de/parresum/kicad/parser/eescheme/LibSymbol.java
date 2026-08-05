@@ -24,6 +24,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * defines a symbol library contain all of the symbols used in the schematic.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -31,6 +34,9 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class LibSymbol {
 
+   /**
+    * A list of 0 or more symbols.
+    */
    @SExprSymbol("symbol")
    private List<Symbol> symbols;
 

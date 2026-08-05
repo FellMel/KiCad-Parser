@@ -22,6 +22,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * The stroke defines how the outlines of graphical objects are drawn.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -29,7 +32,7 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class Stroke {
 
-   /** width of line */
+   /** width of the line */
    @SExprSymbol("width")
    private double width;
 

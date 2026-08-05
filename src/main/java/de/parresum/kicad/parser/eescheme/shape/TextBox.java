@@ -27,21 +27,37 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Defines a rectangle containing line-wrapped text
+ */
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 public class TextBox extends AbstractShape {
+
+   /**
+    * Text in the box
+    */
    @SExprParameter(1)
    private String text;
 
+   /**
+    * Position of the box
+    */
    @SExprSymbol("at")
    private PositionAt at;
 
+   /**
+    * Size of the box
+    */
    @SExprSymbol("size")
    private Size size;
 
+   /**
+    * Style of the text in the box
+    */
    @SExprSymbol("effects")
    private TextEffects effects;
 

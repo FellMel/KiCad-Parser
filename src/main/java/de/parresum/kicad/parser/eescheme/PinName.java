@@ -30,9 +30,15 @@ import lombok.Setter;
 @AllArgsConstructor
 @EqualsAndHashCode
 public class PinName {
+   /**
+    * Name of the pin
+    */
    @SExprParameter(1)
    private String name;
 
+   /**
+    * defines how the text is displayed.
+    */
    @SExprSymbol("effects")
    private TextEffects effects;
 

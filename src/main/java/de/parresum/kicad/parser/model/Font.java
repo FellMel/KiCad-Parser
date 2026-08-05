@@ -24,6 +24,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Font definition of a text
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -31,26 +34,47 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class Font {
 
+   /**
+    * Defiens the font face used for the text
+    */
    @SExprSymbol("face")
    private String fontFace;
 
+   /**
+    * defiens the font height and width
+    */
    @SExprSymbol("size")
    private Size size;
 
+   /**
+    * defiens the line thickness of the font
+    */
    @SExprSymbol("thickness")
    private Double thickness;
 
+   /**
+    * true, if the text should be bold
+    */
    @SExprParameter(value = 1, parameterMappings = { "bold" })
    @SExprSymbol(value = "bold", symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE)
    private boolean bold;
 
+   /**
+    * true, if the text should be italic
+    */
    @SExprParameter(value = 2, parameterMappings = { "italic" })
    @SExprSymbol(value = "italic", symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE)
    private boolean italic;
 
+   /**
+    * defines the spacing between lines as a ration of standard line spacing
+    */
    @SExprSymbol("line_spacing")
    private Integer lineSpacing;
 
+   /**
+    * color of the font
+    */
    @SExprSymbol("color")
    private Color color;
 }
