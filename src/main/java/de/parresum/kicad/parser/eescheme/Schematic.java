@@ -80,6 +80,9 @@ public class Schematic {
    @SExprSymbol("page")
    private Page page;
 
+   /**
+    * The paper token defines the drawing page size and orientation.
+    */
    @SExprSymbol("paper")
    private PageSettings paper;
 

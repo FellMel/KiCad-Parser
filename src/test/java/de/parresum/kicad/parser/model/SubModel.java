@@ -16,8 +16,15 @@
 package de.parresum.kicad.parser.model;
 
 import de.parresum.kicad.parser.annotations.SExprParameter;
+import de.parresum.kicad.parser.annotations.SExprSymbolType;
 
 public class SubModel {
+
+   @SExprParameter(value = 1, symbolSetType = SExprSymbolType.TREAT_PARAM_AS_ONE_STRING)
+   private String name;
+
+   @SExprParameter(value = 2, symbolSetType = SExprSymbolType.TREAT_PARAM_AS_ONE_STRING)
+   private String id;
 
    public String getName() {
       return name;
@@ -35,9 +42,4 @@ public class SubModel {
       this.id = id;
    }
 
-   @SExprParameter(1)
-   private String name;
-
-   @SExprParameter(2)
-   private String id;
 }

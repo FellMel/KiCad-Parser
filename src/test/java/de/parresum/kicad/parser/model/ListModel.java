@@ -16,12 +16,13 @@
 package de.parresum.kicad.parser.model;
 
 import de.parresum.kicad.parser.annotations.SExprParameter;
+import de.parresum.kicad.parser.annotations.SExprSymbolType;
 
 public class ListModel {
-   @SExprParameter(1)
+   @SExprParameter(value = 1, symbolSetType = SExprSymbolType.TREAT_PARAM_AS_ONE_STRING)
    private String name;
 
-   @SExprParameter(2)
+   @SExprParameter(value = 2, symbolSetType = SExprSymbolType.TREAT_PARAM_AS_ONE_STRING)
    private String id;
 
    public String getName() {

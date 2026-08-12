@@ -4,7 +4,7 @@
   <artifactId>kicadparser</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>Parser for KiCad Modell</name>
+  <name>Parser for KiCad Model</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
