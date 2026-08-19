@@ -107,7 +107,6 @@ public class SExprClassHelper {
          InstantiationException, InvocationTargetException, ParseException {
 
       final Class<? extends Object> type = target.getClass();
-      System.out.println("parsing type " + type.getSimpleName());
 
       final SExprDescriptor descriptor = analyzeType(type);
       int paramPos = 0;
@@ -120,13 +119,11 @@ public class SExprClassHelper {
 
             do {
                final SAtom atom = entry.asAtom();
-               System.out.println("Parsing argument " + paramPos + " : " + atom.asString(null));
                Accessor field = descriptor.getParameter(paramPos);
                if (field == null) {
                   field = descriptor.getParameter(-1);
                }
                if (field == null) {
-                  System.err.println("Missing attribut of position " + paramPos + " for class " + type.getSimpleName());
                   throw new IllegalArgumentException(
                         "Missing attribut of position " + paramPos + " for class " + type.getSimpleName());
                }
@@ -140,19 +137,14 @@ public class SExprClassHelper {
 
          } else {
             String name = entry.getName();
-            if (name.equals("do_not_autoplace")) {
-               System.out.println("." + entry.get(1).asAtom().asString(""));
-            }
             boolean elementWithoutName = false;
             // Element ohne Namen
             if (entry.get(0).asAtom().isString()) {
                name = "<NO_NAME>";
                elementWithoutName = true;
             }
-            System.out.println("Parsing Element " + name);
             final ElementAccessor field = descriptor.getElement(name);
             if (field == null) {
-               System.err.println("Field not found: " + name + " in class " + type.getSimpleName());
                throw new IllegalArgumentException("Field not found: " + name + " in class " + type.getSimpleName());
             }
 
