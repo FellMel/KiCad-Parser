@@ -26,6 +26,8 @@ import lombok.Setter;
 
 /**
  * defines a group of items
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

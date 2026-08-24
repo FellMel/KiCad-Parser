@@ -25,6 +25,8 @@ import lombok.Setter;
 
 /**
  * A uuid to identify some elements within the document
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

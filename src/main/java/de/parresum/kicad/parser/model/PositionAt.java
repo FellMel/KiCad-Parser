@@ -24,6 +24,8 @@ import lombok.ToString;
 
 /**
  * Defienes position and orientation of an object
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter
@@ -33,12 +35,12 @@ import lombok.ToString;
 public class PositionAt extends Position {
 
    /**
-    * Optional angle of the element in degree.
+    * Optional angle of the element in degree. default is 0
     *
     * Text-Elements are in tenth of degrees.
     */
    @SExprParameter(3)
-   private Double angle;
+   private double angle;
 
    @SExprParameter(4)
    private String locked;

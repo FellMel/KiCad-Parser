@@ -17,7 +17,8 @@ package de.parresum.kicad.parser.sexpr.reflection;
 
 /**
  * Helper to access double elements
- */
+  * @author Kai Uwe Bachmann
+*/
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.text.ParseException;

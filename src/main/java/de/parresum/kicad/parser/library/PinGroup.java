@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.parresum.kicad.parser.eescheme;
+package de.parresum.kicad.parser.library;
 
 import java.util.List;
 
-import de.parresum.kicad.parser.annotations.SExprSymbol;
+import de.parresum.kicad.parser.annotations.SExprParameter;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -29,7 +29,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class JumperPinGroups {
-   @SExprSymbol(value = "<NO_NAME>")
-   private List<PinGroup> groups;
+public class PinGroup {
+   @SExprParameter(-1)
+   private List<String> member;
 }

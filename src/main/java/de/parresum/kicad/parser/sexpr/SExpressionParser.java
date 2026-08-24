@@ -26,6 +26,8 @@ import de.parresum.kicad.parser.sexpr.reflection.SExprClassHelper;
 /**
  * Extremely high-performance, lightweight, and streaming S-Expression parser. Reads directly from a Reader
  * character-by-character to maximize speed and minimize memory allocations.
+ *
+ * @author Kai Uwe Bachmann
  */
 public class SExpressionParser {
 

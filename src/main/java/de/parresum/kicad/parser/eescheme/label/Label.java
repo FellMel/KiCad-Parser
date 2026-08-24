@@ -18,7 +18,7 @@ package de.parresum.kicad.parser.eescheme.label;
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprSymbol;
-import de.parresum.kicad.parser.eescheme.Property;
+import de.parresum.kicad.parser.model.Property;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -27,6 +27,8 @@ import lombok.Setter;
 
 /**
  * The Label defines an wire or bus label name in a schematic.
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

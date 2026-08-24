@@ -20,6 +20,8 @@ import java.util.List;
 
 /**
  * Represents a nested S-Expression list enclosed in parenthesis. Example: (paper "A4")
+ *
+ * @author Kai Uwe Bachmann
  */
 public class SList extends SNode {
    /**

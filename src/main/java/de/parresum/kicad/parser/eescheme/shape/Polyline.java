@@ -25,6 +25,8 @@ import lombok.Setter;
 
 /**
  * defines one or more graphical lines that may or may not define a polygon.
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

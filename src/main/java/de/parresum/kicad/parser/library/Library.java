@@ -13,14 +13,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.parresum.kicad.parser.eescheme;
+package de.parresum.kicad.parser.library;
 
-public enum PinShapeType {
-   LINE, INVERTED, CLOCK, INVERTED_CLOCK, INPUT_LOW, CLOCK_LOW, OUTPUT_LOW, EDGE_CLOCK_HIGH, NON_LOGIC;
+import java.util.List;
 
-   @Override
-   public String toString() {
-      return name().toLowerCase();
-   }
+import de.parresum.kicad.parser.annotations.SExprSymbol;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+/**
+ * defines a symbol library contain all of the symbols used in the schematic.
+ *
+ * @author Kai Uwe Bachmann
+ */
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
+public class Library {
+
+   /**
+    * A list of 0 or more symbols.
+    */
+   @SExprSymbol("symbol")
+   private List<LibSymbol> symbols;
 
 }

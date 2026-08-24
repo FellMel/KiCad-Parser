@@ -26,6 +26,8 @@ import lombok.Setter;
 
 /**
  * The Path is the path to the sheet instance for the instance data.
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

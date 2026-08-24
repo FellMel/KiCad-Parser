@@ -22,6 +22,8 @@ import de.parresum.kicad.parser.annotations.SExprSymbol;
 
 /**
  * helper to access long elements
+ *
+ * @author Kai Uwe Bachmann
  */
 public class LongElementAccessor extends LongAccessor implements ElementAccessor {
 

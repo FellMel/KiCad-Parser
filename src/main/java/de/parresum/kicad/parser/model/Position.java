@@ -25,6 +25,8 @@ import lombok.ToString;
 
 /**
  * Defines the position of an object
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

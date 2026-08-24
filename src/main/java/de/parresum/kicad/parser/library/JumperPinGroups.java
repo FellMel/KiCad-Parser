@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.parresum.kicad.parser.eescheme;
+package de.parresum.kicad.parser.library;
 
 import java.util.List;
 
@@ -24,20 +24,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * defines a symbol library contain all of the symbols used in the schematic.
- */
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class LibSymbol {
-
-   /**
-    * A list of 0 or more symbols.
-    */
-   @SExprSymbol("symbol")
-   private List<Symbol> symbols;
-
+public class JumperPinGroups {
+   @SExprSymbol(value = "<NO_NAME>")
+   private List<PinGroup> groups;
 }

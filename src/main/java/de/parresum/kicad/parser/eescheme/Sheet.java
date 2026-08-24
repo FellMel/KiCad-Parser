@@ -21,6 +21,7 @@ import de.parresum.kicad.parser.annotations.SExprSymbol;
 import de.parresum.kicad.parser.annotations.SExprSymbolType;
 import de.parresum.kicad.parser.model.Fill;
 import de.parresum.kicad.parser.model.PositionAt;
+import de.parresum.kicad.parser.model.Property;
 import de.parresum.kicad.parser.model.Size;
 import de.parresum.kicad.parser.model.Stroke;
 import de.parresum.kicad.parser.model.UUID;
@@ -32,6 +33,8 @@ import lombok.Setter;
 
 /**
  * The Sheet defines a hierarchical sheet of the schematic.
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

@@ -13,49 +13,78 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.parresum.kicad.parser.eescheme;
+package de.parresum.kicad.parser.model;
 
+import de.parresum.kicad.parser.annotations.SExprModel;
 import de.parresum.kicad.parser.annotations.SExprParameter;
 import de.parresum.kicad.parser.annotations.SExprSymbol;
 import de.parresum.kicad.parser.annotations.SExprSymbolType;
-import de.parresum.kicad.parser.model.Font;
-import de.parresum.kicad.parser.model.Size;
-import de.parresum.kicad.parser.model.TextEffects;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * The property defines a symbol property when used inside a symbol definition
+ *
+ * @author Kai Uwe Bachmann
+ */
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
 
-public class PinNumber {
+@SExprModel(order = { //
+      "key", //
+      "value", //
+      "id", //
+      "at", //
+      "showName", //
+      "doNotAutoplace", //
+      "hide", //
+      "effects" //
+})
+public class Property {
+
    /**
-    * Number of the pin
+    * defines the name of the property and must be unique.
     */
    @SExprParameter(1)
-   private String name;
+   private String key;
 
-   @SExprParameter(value = 2, parameterMappings = { "hide" })
+   /**
+    * defines the value of the property.
+    */
+   @SExprParameter(2)
+   private String value;
+
+   /**
+    * defines an integer ID for the property and must be unique.
+    */
+   @SExprSymbol("id")
+   private Integer id;
+
+   /**
+    * defines the X and Y coordinates and rotation angle of the property.
+    */
+   @SExprSymbol("at")
+   private PositionAt at;
+
    @SExprSymbol(value = "hide", symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE)
    private boolean hide;
 
    /**
-    * defines how the number is displayed.
+    * defines how the text is displayed.
     */
    @SExprSymbol("effects")
    private TextEffects effects;
 
-   public PinNumber(final String name, final Size size) {
-      super();
-      this.name = name;
-      this.effects = new TextEffects();
-      this.effects.setFont(new Font());
-      this.effects.getFont().setSize(size);
-   }
+   @SExprSymbol("show_name")
+   private boolean showName;
+
+   @SExprSymbol(value = "do_not_autoplace", symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE)
+   private boolean doNotAutoplace;
 
 }

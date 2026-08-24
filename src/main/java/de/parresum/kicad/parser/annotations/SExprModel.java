@@ -23,6 +23,8 @@ import java.lang.annotation.Target;
 
 /**
  * Optional annotation for parseable objects
+ *
+ * @author Kai Uwe Bachmann
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

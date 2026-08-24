@@ -25,6 +25,7 @@ import de.parresum.kicad.parser.sexpr.SExpressionWriter;
 /**
  * Helper to Access String fields as simple Atom
  *
+ * @author Kai Uwe Bachmann
  */
 public class StringAccessor extends AbstractAccessor {
 

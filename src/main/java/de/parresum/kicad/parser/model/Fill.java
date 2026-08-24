@@ -24,6 +24,8 @@ import lombok.Setter;
 
 /**
  * Defines a fill type
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

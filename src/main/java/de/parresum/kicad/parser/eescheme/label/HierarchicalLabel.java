@@ -26,6 +26,8 @@ import lombok.Setter;
 /**
  * The HierarchicalLabel defines labels that are used by hierarchical sheets to define connections between sheet in
  * hierarchical designs.
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

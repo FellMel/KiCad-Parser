@@ -21,6 +21,8 @@ import de.parresum.kicad.parser.sexpr.SAtom;
 
 /**
  * helper to access int arguments
+ *
+ * @author Kai Uwe Bachmann
  */
 public class IntAccessor extends AbstractAccessor {
 

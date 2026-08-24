@@ -26,6 +26,8 @@ import lombok.Setter;
 
 /**
  * The NoConnect defines a unused pin connection in the schematic.
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

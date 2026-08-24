@@ -20,6 +20,8 @@ import java.io.Writer;
 
 /**
  * Simple writer to write SExpr files
+ *
+ * @author Kai Uwe Bachmann
  */
 public class SExpressionWriter {
    /** Type last written */

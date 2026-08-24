@@ -26,6 +26,8 @@ import lombok.Setter;
 
 /**
  * defines the content of the title block
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

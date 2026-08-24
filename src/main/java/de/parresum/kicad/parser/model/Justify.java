@@ -24,6 +24,8 @@ import lombok.Setter;
 
 /**
  * defines the justify of a text
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

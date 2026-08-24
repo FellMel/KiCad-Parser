@@ -26,6 +26,8 @@ import lombok.Setter;
 
 /**
  * Font definition of a text
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

@@ -25,6 +25,8 @@ import lombok.Setter;
 
 /**
  * Defines an arc
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

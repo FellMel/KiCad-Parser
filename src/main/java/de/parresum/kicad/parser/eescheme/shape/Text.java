@@ -27,6 +27,8 @@ import lombok.Setter;
 
 /**
  * defines graphical text in a symbol definition.
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

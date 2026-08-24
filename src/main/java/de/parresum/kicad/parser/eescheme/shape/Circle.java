@@ -25,6 +25,8 @@ import lombok.Setter;
 
 /**
  * Defines a circle element
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

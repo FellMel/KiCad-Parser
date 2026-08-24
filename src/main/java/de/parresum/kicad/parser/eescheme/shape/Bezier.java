@@ -25,8 +25,8 @@ import lombok.Setter;
 
 /**
  * defines a graphical Qubic Bezier curve.
- * 
- * 
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

@@ -19,8 +19,8 @@ import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprModel;
 import de.parresum.kicad.parser.annotations.SExprSymbol;
-import de.parresum.kicad.parser.eescheme.Property;
 import de.parresum.kicad.parser.eescheme.ShapeType;
+import de.parresum.kicad.parser.model.Property;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -29,6 +29,8 @@ import lombok.Setter;
 
 /**
  * The GlobalLabel defines a label name that is visible across all schematics in a design.
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

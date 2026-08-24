@@ -24,6 +24,8 @@ import lombok.Setter;
 
 /**
  * Defines the drawing page size and orientation
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

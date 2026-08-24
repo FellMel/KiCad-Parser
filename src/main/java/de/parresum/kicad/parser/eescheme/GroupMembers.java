@@ -26,6 +26,8 @@ import lombok.Setter;
 
 /**
  * Members of a group
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

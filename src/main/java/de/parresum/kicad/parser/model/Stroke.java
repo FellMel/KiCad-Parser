@@ -24,6 +24,8 @@ import lombok.Setter;
 
 /**
  * The stroke defines how the outlines of graphical objects are drawn.
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

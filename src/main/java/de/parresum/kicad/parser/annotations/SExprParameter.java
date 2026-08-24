@@ -22,6 +22,8 @@ import java.lang.annotation.Target;
 
 /**
  * Annotation to mark a field read and write as simple Argument (S-Expr Atom)
+ *
+ * @author Kai Uwe Bachmann
  */
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)

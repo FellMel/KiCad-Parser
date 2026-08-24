@@ -21,6 +21,7 @@ import java.text.ParseException;
 /**
  * Base for Helper to access fields within objects
  *
+ * @author Kai Uwe Bachmann
  */
 public interface ElementAccessor extends Accessor {
 

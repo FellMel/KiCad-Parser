@@ -17,6 +17,8 @@ package de.parresum.kicad.parser.sexpr;
 
 /**
  * Represents a single scalar string or symbol in KiCad S-Expressions.
+ *
+ * @author Kai Uwe Bachmann
  */
 public class SAtom extends SNode {
    /** the value of the atom */

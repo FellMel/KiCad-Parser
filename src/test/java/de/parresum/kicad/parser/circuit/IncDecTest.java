@@ -25,12 +25,6 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 import de.parresum.kicad.parser.eescheme.Junction;
-import de.parresum.kicad.parser.eescheme.LibSymbol;
-import de.parresum.kicad.parser.eescheme.Pin;
-import de.parresum.kicad.parser.eescheme.PinNumber;
-import de.parresum.kicad.parser.eescheme.PinShapeType;
-import de.parresum.kicad.parser.eescheme.PinType;
-import de.parresum.kicad.parser.eescheme.Property;
 import de.parresum.kicad.parser.eescheme.Schematic;
 import de.parresum.kicad.parser.eescheme.ShapeType;
 import de.parresum.kicad.parser.eescheme.Symbol;
@@ -39,6 +33,13 @@ import de.parresum.kicad.parser.eescheme.label.GlobalLabel;
 import de.parresum.kicad.parser.eescheme.label.Label;
 import de.parresum.kicad.parser.eescheme.shape.Rectangle;
 import de.parresum.kicad.parser.eescheme.shape.Text;
+import de.parresum.kicad.parser.library.GraphPin;
+import de.parresum.kicad.parser.library.GraphSymbol;
+import de.parresum.kicad.parser.library.LibSymbol;
+import de.parresum.kicad.parser.library.Library;
+import de.parresum.kicad.parser.library.PinNumber;
+import de.parresum.kicad.parser.library.PinShapeType;
+import de.parresum.kicad.parser.library.PinType;
 import de.parresum.kicad.parser.model.Color;
 import de.parresum.kicad.parser.model.Fill;
 import de.parresum.kicad.parser.model.FillType;
@@ -46,6 +47,7 @@ import de.parresum.kicad.parser.model.HorizontalAlignment;
 import de.parresum.kicad.parser.model.PaperSizeType;
 import de.parresum.kicad.parser.model.Position;
 import de.parresum.kicad.parser.model.PositionAt;
+import de.parresum.kicad.parser.model.Property;
 import de.parresum.kicad.parser.model.Size;
 import de.parresum.kicad.parser.model.Stroke;
 import de.parresum.kicad.parser.model.StrokeType;
@@ -105,7 +107,7 @@ public class IncDecTest {
       assertEquals("Inc / Dec 2 Bit", title.getTitle());
    }
 
-   private void checkLibSymbols(final LibSymbol lib) {
+   private void checkLibSymbols(final Library lib) {
       assertNotNull(lib);
       assertEquals(7, lib.getSymbols().size());
       checkLibSymbol0(lib.getSymbols().get(0));
@@ -118,7 +120,7 @@ public class IncDecTest {
    }
 
    // ------------------------------------------------------
-   private void checkLibSymbol0(final Symbol symbol) {
+   private void checkLibSymbol0(final LibSymbol symbol) {
       assertEquals("And 2_1", symbol.getName());
       assertEquals(true, symbol.getPinNumbers().isHide());
       assertEquals(0.0, symbol.getPinNames().getOffset());
@@ -144,7 +146,7 @@ public class IncDecTest {
       assertEquals(false, symbol.getEmbeddedFonts());
    }
 
-   private void checkLibSymbol0_0(final Symbol symbol) {
+   private void checkLibSymbol0_0(final GraphSymbol symbol) {
       assertEquals("And 2_1_0_1", symbol.getName());
       assertEquals(1, symbol.getRectangles().size());
       final Rectangle rect = symbol.getRectangles().get(0);
@@ -155,7 +157,7 @@ public class IncDecTest {
 
    }
 
-   private void checkLibSymbol0_1(final Symbol symbol) {
+   private void checkLibSymbol0_1(final GraphSymbol symbol) {
       assertEquals("And 2_1_1_1", symbol.getName());
       assertEquals(1, symbol.getTexts().size());
 
@@ -177,7 +179,7 @@ public class IncDecTest {
    }
 
    // ------------------------------------------------------
-   private void checkLibSymbol1(final Symbol symbol) {
+   private void checkLibSymbol1(final LibSymbol symbol) {
       assertEquals("Xor 2_1", symbol.getName());
       assertEquals(true, symbol.getPinNumbers().isHide());
       assertEquals(0.0, symbol.getPinNames().getOffset());
@@ -204,7 +206,7 @@ public class IncDecTest {
 
    }
 
-   private void checkLibSymbol1_0(final Symbol symbol) {
+   private void checkLibSymbol1_0(final GraphSymbol symbol) {
       assertEquals("Xor 2_1_0_1", symbol.getName());
       assertEquals(1, symbol.getRectangles().size());
       final Rectangle rect = symbol.getRectangles().get(0);
@@ -215,7 +217,7 @@ public class IncDecTest {
 
    }
 
-   private void checkLibSymbol1_1(final Symbol symbol) {
+   private void checkLibSymbol1_1(final GraphSymbol symbol) {
       assertEquals("Xor 2_1_1_1", symbol.getName());
       assertEquals(1, symbol.getTexts().size());
 
@@ -237,7 +239,7 @@ public class IncDecTest {
    }
 
    // ------------------------------------------------------
-   private void checkLibSymbol2(final Symbol symbol) {
+   private void checkLibSymbol2(final LibSymbol symbol) {
       assertEquals("Xor 2_2", symbol.getName());
       assertEquals(true, symbol.getPinNumbers().isHide());
       assertEquals(0.0, symbol.getPinNames().getOffset());
@@ -263,7 +265,7 @@ public class IncDecTest {
       assertEquals(false, symbol.getEmbeddedFonts());
    }
 
-   private void checkLibSymbol2_0(final Symbol symbol) {
+   private void checkLibSymbol2_0(final GraphSymbol symbol) {
       assertEquals("Xor 2_2_0_1", symbol.getName());
       assertEquals(1, symbol.getRectangles().size());
       final Rectangle rect = symbol.getRectangles().get(0);
@@ -274,7 +276,7 @@ public class IncDecTest {
 
    }
 
-   private void checkLibSymbol2_1(final Symbol symbol) {
+   private void checkLibSymbol2_1(final GraphSymbol symbol) {
       assertEquals("Xor 2_2_1_1", symbol.getName());
       assertEquals(1, symbol.getTexts().size());
 
@@ -296,7 +298,7 @@ public class IncDecTest {
    }
 
    // ------------------------------------------------------
-   private void checkLibSymbol3(final Symbol symbol) {
+   private void checkLibSymbol3(final LibSymbol symbol) {
       assertEquals("Xor 2_3", symbol.getName());
       assertEquals(true, symbol.getPinNumbers().isHide());
       assertEquals(0.0, symbol.getPinNames().getOffset());
@@ -322,7 +324,7 @@ public class IncDecTest {
       assertEquals(false, symbol.getEmbeddedFonts());
    }
 
-   private void checkLibSymbol3_0(final Symbol symbol) {
+   private void checkLibSymbol3_0(final GraphSymbol symbol) {
       assertEquals("Xor 2_3_0_1", symbol.getName());
       assertEquals(1, symbol.getRectangles().size());
       final Rectangle rect = symbol.getRectangles().get(0);
@@ -333,7 +335,7 @@ public class IncDecTest {
 
    }
 
-   private void checkLibSymbol3_1(final Symbol symbol) {
+   private void checkLibSymbol3_1(final GraphSymbol symbol) {
       assertEquals("Xor 2_3_1_1", symbol.getName());
       assertEquals(1, symbol.getTexts().size());
 
@@ -355,7 +357,7 @@ public class IncDecTest {
    }
 
    // ------------------------------------------------------
-   private void checkLibSymbol4(final Symbol symbol) {
+   private void checkLibSymbol4(final LibSymbol symbol) {
       assertEquals("toplevel.kicad_sch:And 2", symbol.getName());
       assertEquals(true, symbol.getPinNumbers().isHide());
       assertEquals(0.0, symbol.getPinNames().getOffset());
@@ -381,7 +383,7 @@ public class IncDecTest {
       assertEquals(false, symbol.getEmbeddedFonts());
    }
 
-   private void checkLibSymbol4_0(final Symbol symbol) {
+   private void checkLibSymbol4_0(final GraphSymbol symbol) {
       assertEquals("And 2_0_1", symbol.getName());
       assertEquals(1, symbol.getRectangles().size());
       final Rectangle rect = symbol.getRectangles().get(0);
@@ -392,7 +394,7 @@ public class IncDecTest {
 
    }
 
-   private void checkLibSymbol4_1(final Symbol symbol) {
+   private void checkLibSymbol4_1(final GraphSymbol symbol) {
       assertEquals("And 2_1_1", symbol.getName());
       assertEquals(1, symbol.getTexts().size());
 
@@ -414,7 +416,7 @@ public class IncDecTest {
    }
 
    // ------------------------------------------------------
-   private void checkLibSymbol5(final Symbol symbol) {
+   private void checkLibSymbol5(final LibSymbol symbol) {
       assertEquals("toplevel.kicad_sch:And 3", symbol.getName());
       assertEquals(true, symbol.getPinNumbers().isHide());
       assertEquals(0.0, symbol.getPinNames().getOffset());
@@ -440,7 +442,7 @@ public class IncDecTest {
       assertEquals(false, symbol.getEmbeddedFonts());
    }
 
-   private void checkLibSymbol5_0(final Symbol symbol) {
+   private void checkLibSymbol5_0(final GraphSymbol symbol) {
       assertEquals("And 3_0_1", symbol.getName());
       assertEquals(1, symbol.getRectangles().size());
       final Rectangle rect = symbol.getRectangles().get(0);
@@ -451,7 +453,7 @@ public class IncDecTest {
 
    }
 
-   private void checkLibSymbol5_1(final Symbol symbol) {
+   private void checkLibSymbol5_1(final GraphSymbol symbol) {
       assertEquals("And 3_1_1", symbol.getName());
       assertEquals(1, symbol.getTexts().size());
 
@@ -475,7 +477,7 @@ public class IncDecTest {
    }
 
    // ------------------------------------------------------
-   private void checkLibSymbol6(final Symbol symbol) {
+   private void checkLibSymbol6(final LibSymbol symbol) {
       assertEquals("toplevel.kicad_sch:Xor 2", symbol.getName());
       assertEquals(true, symbol.getPinNumbers().isHide());
       assertEquals(0.0, symbol.getPinNames().getOffset());
@@ -501,7 +503,7 @@ public class IncDecTest {
       assertEquals(false, symbol.getEmbeddedFonts());
    }
 
-   private void checkLibSymbol6_0(final Symbol symbol) {
+   private void checkLibSymbol6_0(final GraphSymbol symbol) {
       assertEquals("Xor 2_0_1", symbol.getName());
       assertEquals(1, symbol.getRectangles().size());
       final Rectangle rect = symbol.getRectangles().get(0);
@@ -512,7 +514,7 @@ public class IncDecTest {
 
    }
 
-   private void checkLibSymbol6_1(final Symbol symbol) {
+   private void checkLibSymbol6_1(final GraphSymbol symbol) {
       assertEquals("Xor 2_1_1", symbol.getName());
       assertEquals(1, symbol.getTexts().size());
 
@@ -1085,7 +1087,7 @@ public class IncDecTest {
       assertEquals(fontSize, property.getEffects().getFont().getSize());
    }
 
-   private void checkPin(final Pin pin, final PinType pinType, final PinShapeType shape, final PositionAt at,
+   private void checkPin(final GraphPin pin, final PinType pinType, final PinShapeType shape, final PositionAt at,
          final double length, final String name, final Size size, final PinNumber number) {
       assertEquals(pinType, pin.getElectricalPinType());
       assertEquals(shape, pin.getGraphicPinShape());

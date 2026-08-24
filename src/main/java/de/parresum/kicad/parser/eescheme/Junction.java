@@ -27,6 +27,8 @@ import lombok.Setter;
 
 /**
  * The junction defines a junction in the schematic.
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

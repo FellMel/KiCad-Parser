@@ -17,7 +17,8 @@ package de.parresum.kicad.parser.eescheme;
 
 import de.parresum.kicad.parser.annotations.SExprParameter;
 import de.parresum.kicad.parser.annotations.SExprSymbol;
-import de.parresum.kicad.parser.annotations.SExprSymbolType;
+import de.parresum.kicad.parser.library.AlternatePin;
+import de.parresum.kicad.parser.library.PinType;
 import de.parresum.kicad.parser.model.PositionAt;
 import de.parresum.kicad.parser.model.TextEffects;
 import de.parresum.kicad.parser.model.UUID;
@@ -29,6 +30,8 @@ import lombok.Setter;
 
 /**
  * defines a pin in a symbol definition.
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter
@@ -51,12 +54,6 @@ public class Pin {
    private PinType electricalPinType;
 
    /**
-    * defines the graphical style used to draw the pin.
-    */
-   @SExprParameter(3)
-   private PinShapeType graphicPinShape;
-
-   /**
     * The UUID defines the universally unique identifier for the pin.
     */
    @SExprSymbol("uuid")
@@ -69,25 +66,6 @@ public class Pin {
    @SExprSymbol("at")
    private PositionAt position;
 
-   @SExprParameter(value = 4, parameterMappings = { "hide" })
-   @SExprSymbol(value = "hide", symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE)
-   private boolean hide;
-
-   /**
-    * defines the length of the pin.
-    */
-   @SExprSymbol("length")
-   private Double length;
-
-   /**
-    * containing the name of the pin
-    */
-   @SExprSymbol("name")
-   private PinName pinName;
-
-   @SExprSymbol("number")
-   private PinNumber pinNumber;
-
    /**
     * defines how the text is displayed.
     */
@@ -95,6 +73,6 @@ public class Pin {
    private TextEffects effects;
 
    @SExprSymbol("alternate")
-   private Pin alternatePin;
+   private AlternatePin alternatePin;
 
 }

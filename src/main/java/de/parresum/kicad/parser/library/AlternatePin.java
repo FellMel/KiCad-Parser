@@ -13,9 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.parresum.kicad.parser.eescheme;
 
-import java.util.List;
+package de.parresum.kicad.parser.library;
 
 import de.parresum.kicad.parser.annotations.SExprParameter;
 import lombok.AllArgsConstructor;
@@ -24,12 +23,34 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Specifies alternate pins
+ *
+ * @author Kai Uwe Bachmann
+ */
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class PinGroup {
-   @SExprParameter(-1)
-   private List<String> member;
+public class AlternatePin {
+   /**
+    * The name attribute defines the name of the pin. It must have an identically named hierarchical label in the
+    * associated schematic file.
+    */
+   @SExprParameter(1)
+   private String name;
+
+   /**
+    * defines the pin electrical connection.
+    */
+   @SExprParameter(2)
+   private PinType electricalPinType;
+
+   /**
+    * defines the graphical style used to draw the pin.
+    */
+   @SExprParameter(3)
+   private PinShapeType graphicPinShape;
+
 }

@@ -27,6 +27,8 @@ import lombok.Setter;
 
 /**
  * The Bus define buses in the schematic.
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

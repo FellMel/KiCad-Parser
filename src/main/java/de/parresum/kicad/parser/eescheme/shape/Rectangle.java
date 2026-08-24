@@ -25,6 +25,8 @@ import lombok.Setter;
 
 /**
  * defines a graphical rectangle in a symbol definition.
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

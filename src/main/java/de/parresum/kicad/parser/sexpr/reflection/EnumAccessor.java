@@ -21,6 +21,8 @@ import de.parresum.kicad.parser.sexpr.SAtom;
 
 /**
  * helper to access enum arguments
+ *
+ * @author Kai Uwe Bachmann
  */
 public class EnumAccessor extends AbstractAccessor {
 

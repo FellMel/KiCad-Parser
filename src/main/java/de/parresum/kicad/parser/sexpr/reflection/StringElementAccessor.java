@@ -24,6 +24,7 @@ import de.parresum.kicad.parser.annotations.SExprSymbolType;
 /**
  * Helper to access String fields within a class as Element
  *
+ * @author Kai Uwe Bachmann
  */
 public class StringElementAccessor extends StringAccessor implements ElementAccessor {
 

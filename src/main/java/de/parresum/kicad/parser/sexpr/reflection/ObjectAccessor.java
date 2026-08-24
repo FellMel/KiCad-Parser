@@ -26,6 +26,8 @@ import de.parresum.kicad.parser.sexpr.SAtom;
 
 /**
  * helper to access object elements
+ *
+ * @author Kai Uwe Bachmann
  */
 public class ObjectAccessor implements ElementAccessor {
 

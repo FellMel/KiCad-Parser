@@ -22,6 +22,7 @@ import de.parresum.kicad.parser.sexpr.SAtom;
 /**
  * Helper to Access Integer fields
  *
+ * @author Kai Uwe Bachmann
  */
 public class LongAccessor extends AbstractAccessor {
 

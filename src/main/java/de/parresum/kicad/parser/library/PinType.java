@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.parresum.kicad.parser.eescheme;
+package de.parresum.kicad.parser.library;
 
 public enum PinType {
    INPUT, OUTPUT, BIDIRECTIONAL, TRI_STATE, PASSIVE, FREE, UNSPECIFIED, POWER_IN, POWER_OUT, OPEN_COLLECTOR,

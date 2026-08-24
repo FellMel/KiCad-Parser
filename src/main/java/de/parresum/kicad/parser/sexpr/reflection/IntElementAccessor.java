@@ -22,6 +22,8 @@ import de.parresum.kicad.parser.annotations.SExprSymbol;
 
 /**
  * helper to access int elements
+ *
+ * @author Kai Uwe Bachmann
  */
 public class IntElementAccessor extends IntAccessor implements ElementAccessor {
 

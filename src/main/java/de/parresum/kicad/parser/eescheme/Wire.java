@@ -27,6 +27,8 @@ import lombok.Setter;
 
 /**
  * The Wire define wires in the schematic.
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

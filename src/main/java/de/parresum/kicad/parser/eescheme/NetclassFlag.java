@@ -21,6 +21,7 @@ import de.parresum.kicad.parser.annotations.SExprParameter;
 import de.parresum.kicad.parser.annotations.SExprSymbol;
 import de.parresum.kicad.parser.annotations.SExprSymbolType;
 import de.parresum.kicad.parser.model.PositionAt;
+import de.parresum.kicad.parser.model.Property;
 import de.parresum.kicad.parser.model.TextEffects;
 import de.parresum.kicad.parser.model.UUID;
 import lombok.AllArgsConstructor;

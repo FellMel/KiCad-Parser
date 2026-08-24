@@ -28,6 +28,8 @@ import lombok.Setter;
 
 /**
  * Base of all graphical shapes
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

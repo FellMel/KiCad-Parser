@@ -25,6 +25,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import de.parresum.kicad.parser.annotations.SExprModel;
 import de.parresum.kicad.parser.annotations.SExprParameter;
 import de.parresum.kicad.parser.annotations.SExprSymbol;
@@ -34,8 +37,12 @@ import de.parresum.kicad.parser.sexpr.SNode;
 
 /**
  * Helper to parse and write Objects
+ *
+ * @author Kai Uwe Bachmann
  */
 public class SExprClassHelper {
+   private final static Logger LOG = LogManager.getLogger(SExprClassHelper.class);
+
    /** cache with already analyzed classes */
    private final static Map<Class<?>, SExprDescriptor> CACHE = new HashMap<>();
 
@@ -124,6 +131,8 @@ public class SExprClassHelper {
                   field = descriptor.getParameter(-1);
                }
                if (field == null) {
+                  LOG.error("Can't parse atom {} with value {} for class {}", paramPos, atom.asString("null"),
+                        target.getClass().getCanonicalName());
                   throw new IllegalArgumentException(
                         "Missing attribut of position " + paramPos + " for class " + type.getSimpleName());
                }
@@ -136,6 +145,7 @@ public class SExprClassHelper {
             } while (true);
 
          } else {
+            LOG.debug("parsing node {} for class {}", entry.getName(), target.getClass().getCanonicalName());
             String name = entry.getName();
             boolean elementWithoutName = false;
             // Element ohne Namen

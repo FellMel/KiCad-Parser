@@ -17,6 +17,8 @@ package de.parresum.kicad.parser.eescheme;
 
 /**
  * A Schematic.
+ *
+ * @author Kai Uwe Bachmann
  */
 import java.util.List;
 
@@ -32,6 +34,7 @@ import de.parresum.kicad.parser.eescheme.shape.Rectangle;
 import de.parresum.kicad.parser.eescheme.shape.RuleArea;
 import de.parresum.kicad.parser.eescheme.shape.Text;
 import de.parresum.kicad.parser.eescheme.shape.TextBox;
+import de.parresum.kicad.parser.library.Library;
 import de.parresum.kicad.parser.model.Page;
 import de.parresum.kicad.parser.model.PageSettings;
 import de.parresum.kicad.parser.model.TitleBlock;
@@ -93,7 +96,7 @@ public class Schematic {
     * The lib_symbols token defines a symbol library contain all of the symbols used in the schematic.
     */
    @SExprSymbol("lib_symbols")
-   private LibSymbol libSymbols;
+   private Library libSymbols;
 
    /**
     * The junction token defines a junction in the schematic. The junction section will not exist if there are no

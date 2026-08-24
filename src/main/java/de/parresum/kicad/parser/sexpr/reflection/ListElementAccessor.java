@@ -25,6 +25,8 @@ import de.parresum.kicad.parser.annotations.SExprSymbol;
 
 /**
  * helper to access list elements
+ *
+ * @author Kai Uwe Bachmann
  */
 public class ListElementAccessor extends ObjectAccessor {
 

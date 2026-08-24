@@ -27,6 +27,8 @@ import lombok.Setter;
 
 /**
  * an embedded image.
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

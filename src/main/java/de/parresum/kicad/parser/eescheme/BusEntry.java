@@ -28,6 +28,8 @@ import lombok.Setter;
 
 /**
  * The BusEntry defines a bus entry in the schematic.
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

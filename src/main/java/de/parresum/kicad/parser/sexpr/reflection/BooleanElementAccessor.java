@@ -24,6 +24,7 @@ import de.parresum.kicad.parser.annotations.SExprSymbolType;
 /**
  * Helper to access boolean fields
  *
+ * @author Kai Uwe Bachmann
  */
 public class BooleanElementAccessor extends BooleanAccessor implements ElementAccessor {
 
@@ -61,7 +62,10 @@ public class BooleanElementAccessor extends BooleanAccessor implements ElementAc
    }
 
    @Override
-   public void set(final Object target, final Object value) throws IllegalArgumentException, IllegalAccessException {
+   public void set(final Object target, Object value) throws IllegalArgumentException, IllegalAccessException {
+      if (value == null && impliciteTrue) {
+         value = true;
+      }
       field.set(target, value);
    }
 

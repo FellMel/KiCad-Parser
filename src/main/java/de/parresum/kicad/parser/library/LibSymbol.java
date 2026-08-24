@@ -13,16 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.parresum.kicad.parser.eescheme;
+package de.parresum.kicad.parser.library;
 
 import java.util.List;
 
+import de.parresum.kicad.parser.annotations.SExprParameter;
 import de.parresum.kicad.parser.annotations.SExprSymbol;
 import de.parresum.kicad.parser.annotations.SExprSymbolType;
-import de.parresum.kicad.parser.model.MirrorType;
-import de.parresum.kicad.parser.model.PositionAt;
 import de.parresum.kicad.parser.model.Property;
-import de.parresum.kicad.parser.model.UUID;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -30,7 +28,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * The symbol token defines a symbol within a scheme.
+ * The symbol token defines a symbol within the library.
  *
  * @author Kai Uwe Bachmann
  */
@@ -39,34 +37,33 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class Symbol {
+public class LibSymbol {
 
    /**
-    * ID of the symbol
+    * Name of the symbol aka library identifier
     */
-   @SExprSymbol("uuid")
-   private UUID uuid;
-
-   @SExprSymbol("lib_name")
-   private String libName;
-
-   @SExprSymbol("lib_id")
-   private String libraryIdentifier;
+   @SExprParameter(1)
+   private String name;
 
    /**
-    * The position defines the X and Y coordinates and angle of rotation of the symbol.
+    * The optional pinNumbers defines the visibility setting of the symbol pin numbers for the entire symbol. If not
+    * defined, all of the pin numbers in the symbol are visible.
     */
-   @SExprSymbol("at")
-   private PositionAt position;
+   @SExprSymbol("pin_numbers")
+   private PinNumber pinNumbers;
+
+   @SExprSymbol(value = "power", symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE)
+   private boolean isPower;
+
+   /**
+    * The optional pinNames defines the attributes for all of the pin names of the symbol. If the pinNames is not
+    * defined, all symbol pins are shown with the default offset.
+    */
+   @SExprSymbol("pin_names")
+   private PinNames pinNames;
 
    @SExprSymbol(value = "exclude_from_sim"/* , symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE */)
    private Boolean excludeFromSim;
-
-   /**
-    * The unit attribute defines which unit in the symbol library definition that the schematic symbol represents.
-    */
-   @SExprSymbol("unit")
-   private Integer unit;
 
    /**
     * The inBom defines, if a symbol is to be include in the bill of material output.
@@ -80,25 +77,13 @@ public class Symbol {
    @SExprSymbol(value = "on_board", symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE)
    private boolean onBoard;
 
-   @SExprSymbol(value = "dnp", symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE)
-   private boolean dnp;
-
    @SExprSymbol(value = "in_pos_files", symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE)
    private boolean inPosFiles;
 
-   @SExprSymbol("passthrough")
-   private PassthroughType passthrough;
+   @SExprSymbol(value = "duplicate_pin_numbers_are_jumpers"/* , symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE */)
+   private Boolean duplicatePinNubersAreJumpers;
 
-   @SExprSymbol("mirror")
-   private MirrorType mirror;
-
-   @SExprSymbol(value = "fields_autoplaced", symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE)
-   private boolean fieldsAutoplaced;
-
-   // ------------------------------------------------------------------------
-   @SExprSymbol("default_instance")
-   private DefaultInstance defaultInstance;
-
+   // // ------------------------------------------------------------------------
    /**
     * The properties is a list of properties that define the symbol. The following properties are mandatory when
     * defining a parent symbol: "Reference", "Value", "Footprint", and "Datasheet". All other properties are optional.
@@ -108,19 +93,21 @@ public class Symbol {
    private List<Property> properties;
 
    /**
-    * The pins is a list of pins that are used by the symbol. This section can be empty if the symbol does not have any
-    * pins.
+    * one or more child symbol tokens embedded in a parent symbol.
     */
-   @SExprSymbol("pin")
-   private List<Pin> pins;
-
-   /**
-    * The instances defines a list of symbol instances grouped by project. Every symbol will have a least one instance.
-    */
-   @SExprSymbol("instances")
-   private List<Instance> instances;
+   @SExprSymbol("symbol")
+   private List<GraphSymbol> symbols;
 
    @SExprSymbol("body_style")
    private Integer bodyStyle; // ???
+
+   @SExprSymbol(value = "body_styles", parameterMappings = { "demorgan" })
+   private boolean bodyStyleDeMorgan;
+
+   @SExprSymbol("jumper_pin_groups")
+   private JumperPinGroups jumperGroups;
+
+   @SExprSymbol(value = "embedded_fonts"/* , symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE */)
+   private Boolean embeddedFonts;
 
 }

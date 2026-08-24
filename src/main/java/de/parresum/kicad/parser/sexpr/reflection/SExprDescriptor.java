@@ -23,6 +23,8 @@ import java.util.Set;
 
 /**
  * Descriptor to hold informations about a Class to parse
+ *
+ * @author Kai Uwe Bachmann
  */
 public class SExprDescriptor {
    /**

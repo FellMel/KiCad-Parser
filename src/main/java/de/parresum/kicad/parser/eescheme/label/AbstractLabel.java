@@ -29,6 +29,8 @@ import lombok.Setter;
 
 /**
  * Base of some labels
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter

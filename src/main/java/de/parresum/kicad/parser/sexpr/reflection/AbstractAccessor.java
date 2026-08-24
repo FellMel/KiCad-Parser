@@ -24,6 +24,7 @@ import java.util.Locale;
 /**
  * Base helper to access fields
  *
+ * @author Kai Uwe Bachmann
  */
 public abstract class AbstractAccessor implements Accessor {
    // TODO: format pattern by annotation

@@ -23,6 +23,7 @@ import de.parresum.kicad.parser.sexpr.SAtom;
 /**
  * Helper to access double fields
  *
+ * @author Kai Uwe Bachmann
  */
 public class DoubleAccessor extends AbstractAccessor {
 

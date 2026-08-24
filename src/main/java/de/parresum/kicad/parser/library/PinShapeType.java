@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.parresum.kicad.parser.annotations;
+package de.parresum.kicad.parser.library;
 
-/**
- * Mode to control parsing of fields
- *
- * @author Kai Uwe Bachmann
- */
-public enum SExprSymbolType {
-   /** standard handling. */
-   SET_PARAMETER,
+public enum PinShapeType {
+   LINE, INVERTED, CLOCK, INVERTED_CLOCK, INPUT_LOW, CLOCK_LOW, OUTPUT_LOW, EDGE_CLOCK_HIGH, NON_LOGIC;
 
-   /** On boolean fields, if element is present, it is handled as true. When absent, it is false. */
-   IMPLICIT_BOOL_TRUE,
-
-   /** handles the value as a string, even if it is not quoted */
-   TREAT_PARAM_AS_ONE_STRING
+   @Override
+   public String toString() {
+      return name().toLowerCase();
+   }
 
 }

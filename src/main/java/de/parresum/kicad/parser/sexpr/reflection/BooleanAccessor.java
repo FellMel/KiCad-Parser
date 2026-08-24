@@ -24,6 +24,7 @@ import de.parresum.kicad.parser.sexpr.SAtom;
 /**
  * Helper to access a boolean field
  *
+ * @author Kai Uwe Bachmann
  */
 public class BooleanAccessor extends AbstractAccessor {
 

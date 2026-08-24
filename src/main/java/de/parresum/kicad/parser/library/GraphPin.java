@@ -13,14 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.parresum.kicad.parser.eescheme.shape;
+package de.parresum.kicad.parser.library;
 
 import de.parresum.kicad.parser.annotations.SExprParameter;
 import de.parresum.kicad.parser.annotations.SExprSymbol;
-import de.parresum.kicad.parser.model.Margin;
+import de.parresum.kicad.parser.annotations.SExprSymbolType;
 import de.parresum.kicad.parser.model.PositionAt;
-import de.parresum.kicad.parser.model.Size;
-import de.parresum.kicad.parser.model.TextEffects;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -28,7 +26,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * Defines a rectangle containing line-wrapped text
+ * defines a graphical pin in a symbol definition.
  *
  * @author Kai Uwe Bachmann
  */
@@ -36,34 +34,48 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(callSuper = true)
-public class TextBox extends AbstractShape {
+@EqualsAndHashCode
+public class GraphPin {
 
    /**
-    * Text in the box
+    * defines the pin electrical connection.
     */
    @SExprParameter(1)
-   private String text;
+   private PinType electricalPinType;
 
    /**
-    * Position of the box
+    * defines the graphical style used to draw the pin.
+    */
+   @SExprParameter(2)
+   private PinShapeType graphicPinShape;
+
+   /**
+    * defines the X and Y coordinates and rotation angle of the connection point of the pin relative to the symbol
+    * origin position. The only supported rotation angles for pins are 0, 90, 180, and 270 degrees.
     */
    @SExprSymbol("at")
-   private PositionAt at;
+   private PositionAt position;
+
+   @SExprParameter(value = 3, parameterMappings = { "hide" })
+   @SExprSymbol(value = "hide", symbolSetType = SExprSymbolType.IMPLICIT_BOOL_TRUE)
+   private boolean hide;
 
    /**
-    * Size of the box
+    * defines the length of the pin.
     */
-   @SExprSymbol("size")
-   private Size size;
+   @SExprSymbol("length")
+   private double length;
 
    /**
-    * Style of the text in the box
+    * containing the name of the pin
     */
-   @SExprSymbol("effects")
-   private TextEffects effects;
+   @SExprSymbol("name")
+   private PinName pinName;
 
-   @SExprSymbol("margins")
-   private Margin margins;
+   @SExprSymbol("number")
+   private PinNumber pinNumber;
+
+   @SExprSymbol("alternate")
+   private AlternatePin alternatePin;
 
 }

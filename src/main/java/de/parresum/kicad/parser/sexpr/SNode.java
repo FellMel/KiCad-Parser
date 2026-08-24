@@ -22,6 +22,8 @@ import java.util.List;
 /**
  * Base abstract class for KiCad S-Expression Nodes. Designed for high-performance traversals and type-safe value
  * retrieval.
+ *
+ * @author Kai Uwe Bachmann
  */
 public abstract class SNode {
    /**

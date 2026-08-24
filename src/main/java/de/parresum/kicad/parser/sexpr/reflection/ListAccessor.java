@@ -26,6 +26,8 @@ import de.parresum.kicad.parser.sexpr.SAtom;
 
 /**
  * helper to access list arguments
+ *
+ * @author Kai Uwe Bachmann
  */
 public class ListAccessor extends AbstractAccessor {
 

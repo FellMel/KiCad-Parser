@@ -17,6 +17,7 @@ package de.parresum.kicad.parser.model;
 
 /**
  * Defines how a text is displayed.
+ * @author Kai Uwe Bachmann
  */
 import de.parresum.kicad.parser.annotations.SExprParameter;
 import de.parresum.kicad.parser.annotations.SExprSymbol;

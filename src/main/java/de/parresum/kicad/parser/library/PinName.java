@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.parresum.kicad.parser.eescheme;
+package de.parresum.kicad.parser.library;
 
-import de.parresum.kicad.parser.annotations.SExprModel;
 import de.parresum.kicad.parser.annotations.SExprParameter;
 import de.parresum.kicad.parser.annotations.SExprSymbol;
+import de.parresum.kicad.parser.model.TextEffects;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -29,21 +29,17 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-@SExprModel(order = { "offset", "hide" })
-public class PinNames {
+public class PinName {
+   /**
+    * Name of the pin
+    */
+   @SExprParameter(1)
+   private String name;
 
    /**
-    * The optional offset defines the pin name offset for all pin names of the symbol. If not defined, the pin name
-    * offset is 0.508mm (0.020").
+    * defines how the text is displayed.
     */
-   @SExprSymbol("offset")
-   private double offset;
-
-   /**
-    *
-    */
-   @SExprParameter(value = 1, parameterMappings = { "hide" })
-   @SExprSymbol(value = "hide")
-   private boolean hide;
+   @SExprSymbol("effects")
+   private TextEffects effects;
 
 }

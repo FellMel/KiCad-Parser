@@ -26,6 +26,8 @@ import lombok.Setter;
 
 /**
  * A list of coordinates
+ *
+ * @author Kai Uwe Bachmann
  */
 @Getter
 @Setter
