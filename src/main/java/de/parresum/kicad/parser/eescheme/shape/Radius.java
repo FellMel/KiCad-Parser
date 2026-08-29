@@ -16,6 +16,7 @@
 package de.parresum.kicad.parser.eescheme.shape;
 
 import de.parresum.kicad.parser.annotations.SExprSymbol;
+import de.parresum.kicad.parser.model.Position;
 import de.parresum.kicad.parser.model.PositionAt;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -36,7 +37,8 @@ public class Radius {
    @SExprSymbol("length")
    private double length;
 
+   // we use this to store 2 doubles ...
    @SExprSymbol("angles")
-   private PositionAt angles;
+   private Position angles;
 
 }
