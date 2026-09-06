@@ -15,6 +15,7 @@
  */
 package de.parresum.kicad.parser.eescheme;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprParameter;
@@ -37,5 +38,5 @@ public class NetChain {
    private String name;
 
    @SExprSymbol("uuid")
-   private List<UUID> uuids;
+   private List<UUID> uuids = new ArrayList<>();
 }

@@ -15,6 +15,7 @@
  */
 package de.parresum.kicad.parser.eescheme;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprParameter;
@@ -59,6 +60,6 @@ public class NetclassFlag {
    private TextEffects effects;
 
    @SExprSymbol("property")
-   private List<Property> properties;
+   private List<Property> properties = new ArrayList<>();
 
 }

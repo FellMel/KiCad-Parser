@@ -15,6 +15,7 @@
  */
 package de.parresum.kicad.parser.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprSymbol;
@@ -64,6 +65,6 @@ public class TitleBlock {
     * one to nine comments to the document
     */
    @SExprSymbol("comment")
-   private List<Comment> comments;
+   private List<Comment> comments = new ArrayList<>();
 
 }

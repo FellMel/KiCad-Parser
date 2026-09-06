@@ -15,6 +15,7 @@
  */
 package de.parresum.kicad.parser.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprSymbol;
@@ -40,6 +41,6 @@ public class PointList {
     * the coordinates
     */
    @SExprSymbol("xy")
-   private List<Position> points;
+   private List<Position> points = new ArrayList<>();
 
 }

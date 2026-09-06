@@ -15,6 +15,7 @@
  */
 package de.parresum.kicad.parser.eescheme;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprParameter;
@@ -31,6 +32,6 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class ImageData {
    @SExprParameter(-1)
-   private List<String> data;
+   private List<String> data = new ArrayList<>();
 
 }

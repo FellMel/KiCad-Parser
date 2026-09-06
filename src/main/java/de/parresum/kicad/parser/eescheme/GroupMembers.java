@@ -15,6 +15,7 @@
  */
 package de.parresum.kicad.parser.eescheme;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprParameter;
@@ -40,6 +41,6 @@ public class GroupMembers {
     * List of UUIDs of the members
     */
    @SExprParameter(-1)
-   private List<String> members;
+   private List<String> members = new ArrayList<>();
 
 }

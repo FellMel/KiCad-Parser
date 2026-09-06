@@ -15,6 +15,7 @@
  */
 package de.parresum.kicad.parser.eescheme;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprSymbol;
@@ -105,20 +106,20 @@ public class Symbol {
     * Unit symbols cannot have any properties.
     */
    @SExprSymbol("property")
-   private List<Property> properties;
+   private List<Property> properties = new ArrayList<>();
 
    /**
     * The pins is a list of pins that are used by the symbol. This section can be empty if the symbol does not have any
     * pins.
     */
    @SExprSymbol("pin")
-   private List<Pin> pins;
+   private List<Pin> pins = new ArrayList<>();
 
    /**
     * The instances defines a list of symbol instances grouped by project. Every symbol will have a least one instance.
     */
    @SExprSymbol("instances")
-   private List<Instance> instances;
+   private List<Instance> instances = new ArrayList<>();
 
    @SExprSymbol("body_style")
    private Integer bodyStyle; // ???

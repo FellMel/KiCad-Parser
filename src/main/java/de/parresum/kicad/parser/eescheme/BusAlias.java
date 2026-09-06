@@ -15,6 +15,7 @@
  */
 package de.parresum.kicad.parser.eescheme;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprParameter;
@@ -35,6 +36,6 @@ public class BusAlias {
    private String name;
 
    @SExprSymbol("members")
-   private List<String> members;
+   private List<String> members = new ArrayList<>();
 
 }

@@ -15,6 +15,7 @@
  */
 package de.parresum.kicad.parser.eescheme;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprSymbol;
@@ -92,18 +93,18 @@ public class Sheet {
     * The properties defines the name and the fileName of the sheet. This properties are mandatory.
     */
    @SExprSymbol("property")
-   private List<Property> properties;
+   private List<Property> properties = new ArrayList<>();
 
    /**
     * The pins is a list of hierarchical pins that map a hierarchical label defined in the associated schematic file.
     */
    @SExprSymbol("pin")
-   private List<Pin> pins;
+   private List<Pin> pins = new ArrayList<>();
 
    /**
     * The instances defines a list of sheet instances grouped by project. Every sheet will have a least one instance.
     */
    @SExprSymbol("instances")
-   private List<Instance> instances;
+   private List<Instance> instances = new ArrayList<>();
 
 }

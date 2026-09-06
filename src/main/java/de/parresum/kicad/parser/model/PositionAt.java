@@ -48,7 +48,7 @@ public class PositionAt extends Position {
    public PositionAt(final double x, final double y, final Double angle) {
       super(x, y);
       this.angle = angle;
-      this.locked = locked;
+      this.locked = null;
    }
 
    public PositionAt(final double x, final double y, final Double angle, final String locked) {

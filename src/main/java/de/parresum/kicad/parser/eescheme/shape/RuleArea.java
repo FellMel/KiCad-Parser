@@ -15,6 +15,7 @@
  */
 package de.parresum.kicad.parser.eescheme.shape;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprSymbol;
@@ -41,6 +42,6 @@ public class RuleArea extends AbstractShape {
    private boolean dnp;
 
    @SExprSymbol("polyline")
-   private List<Polyline> polylines;
+   private List<Polyline> polylines = new ArrayList<>();
 
 }

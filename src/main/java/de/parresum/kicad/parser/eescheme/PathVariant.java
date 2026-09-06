@@ -15,6 +15,7 @@
  */
 package de.parresum.kicad.parser.eescheme;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprSymbol;
@@ -50,5 +51,5 @@ public class PathVariant {
    private Boolean dnp;
 
    @SExprSymbol("field")
-   private List<PathVariantField> fields;
+   private List<PathVariantField> fields = new ArrayList<>();
 }

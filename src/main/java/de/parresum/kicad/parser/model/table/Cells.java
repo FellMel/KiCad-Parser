@@ -15,6 +15,7 @@
  */
 package de.parresum.kicad.parser.model.table;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprSymbol;
@@ -26,5 +27,5 @@ import lombok.Setter;
 public class Cells {
 
    @SExprSymbol("table_cell")
-   private List<TableCell> tableCells;
+   private List<TableCell> tableCells = new ArrayList<>();
 }

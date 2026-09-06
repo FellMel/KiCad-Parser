@@ -15,6 +15,7 @@
  */
 package de.parresum.kicad.parser.eescheme;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprSymbol;
@@ -32,6 +33,6 @@ import lombok.Setter;
 public class SheetInstance {
 
    @SExprSymbol("path")
-   private List<Path> paths;
+   private List<Path> paths = new ArrayList<>();
 
 }

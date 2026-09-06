@@ -15,6 +15,7 @@
  */
 package de.parresum.kicad.parser.eescheme;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprParameter;
@@ -42,6 +43,6 @@ public class Project {
     * The path attribute is the path to the sheet instance for the instance data.
     */
    @SExprSymbol("path")
-   private List<Path> paths;
+   private List<Path> paths = new ArrayList<>();
 
 }

@@ -15,6 +15,7 @@
  */
 package de.parresum.kicad.parser.eescheme;
 
+import java.util.ArrayList;
 /**
  * A Schematic.
  *
@@ -103,124 +104,124 @@ public class Schematic {
     * junctions in the schematic.
     */
    @SExprSymbol("junction")
-   private List<Junction> junctions;
+   private List<Junction> junctions = new ArrayList<>();
 
    /**
     * The no_connect token defines a unused pin connection in the schematic. The no connect section will not exist if
     * there are not any no connects in the schematic.
     */
    @SExprSymbol("no_connect")
-   private List<NoConnect> noConnects;
+   private List<NoConnect> noConnects = new ArrayList<>();
 
    /**
     * The bus_entry token defines a bus entry in the schematic. The bus entry section will not exist if there are no bus
     * entries in the schematic.
     */
    @SExprSymbol("bus_entry")
-   private List<BusEntry> busEntries;
+   private List<BusEntry> busEntries = new ArrayList<>();
 
    /**
     * The wire tokens define wires in the schematic. This section will not exist if there are no wires in the schematic.
     */
    @SExprSymbol("wire")
-   private List<Wire> wires;
+   private List<Wire> wires = new ArrayList<>();
 
    /**
     * The bus tokens define buses in the schematic. This section will not exist if there are no buses in the schematic.
     */
    @SExprSymbol("bus")
-   private List<Bus> buses;
+   private List<Bus> buses = new ArrayList<>();
 
    @SExprSymbol("bus_alias")
-   private List<BusAlias> busAliases;
+   private List<BusAlias> busAliases = new ArrayList<>();
 
    @SExprSymbol("image")
-   private List<Image> images;
+   private List<Image> images = new ArrayList<>();
 
    /**
     * The polyline token defines one or more lines that may or may not represent a polygon. This section will not exist
     * if there are no lines in the schematic.
     */
    @SExprSymbol("polyline")
-   private List<Polyline> polylines;
+   private List<Polyline> polylines = new ArrayList<>();
 
    @SExprSymbol("rectangle")
-   private List<Rectangle> rectangles;
+   private List<Rectangle> rectangles = new ArrayList<>();
 
    @SExprSymbol("circle")
-   private List<Circle> circles;
+   private List<Circle> circles = new ArrayList<>();
 
    @SExprSymbol("arc")
-   private List<Arc> arcs;
+   private List<Arc> arcs = new ArrayList<>();
 
    @SExprSymbol("bezier")
-   private List<Bezier> beziers;
+   private List<Bezier> beziers = new ArrayList<>();
 
    @SExprSymbol("text_box")
-   private List<TextBox> textBoxes;
+   private List<TextBox> textBoxes = new ArrayList<>();
 
    /**
     * The text token defines graphical text in a schematic.
     */
    @SExprSymbol("text")
-   private List<Text> texts;
+   private List<Text> texts = new ArrayList<>();
 
    @SExprSymbol("rule_area")
-   private List<RuleArea> ruleAreas;
+   private List<RuleArea> ruleAreas = new ArrayList<>();
 
    @SExprSymbol("table")
-   private List<Table> tables;
+   private List<Table> tables = new ArrayList<>();
 
    /**
     * The label token defines an wire or bus label name in a schematic.
     */
    @SExprSymbol("label")
-   private List<Label> localLabels;
+   private List<Label> localLabels = new ArrayList<>();
 
    /**
     * The global_label token defines a label name that is visible across all schematics in a design. This section will
     * not exist if no global labels are defined in the schematic.
     */
    @SExprSymbol("global_label")
-   private List<GlobalLabel> globalLabels;
+   private List<GlobalLabel> globalLabels = new ArrayList<>();
 
    /**
     * The hierarchical_label section defines labels that are used by hierarchical sheets to define connections between
     * sheet in hierarchical designs. This section will not exist if no global labels are defined in the schematic.
     */
    @SExprSymbol("hierarchical_label")
-   private List<HierarchicalLabel> hierarchicalLabels;
+   private List<HierarchicalLabel> hierarchicalLabels = new ArrayList<>();
 
    /**
     * The symbol token in the symbol section of the schematic defines an instance of a symbol from the library symbol
     * section of the schematic.
     */
    @SExprSymbol("symbol")
-   private List<Symbol> symbols;
+   private List<Symbol> symbols = new ArrayList<>();
 
    /**
     * The sheet token defines a hierarchical sheet of the schematic.
     */
    @SExprSymbol("sheet")
-   private List<Sheet> sheets;
+   private List<Sheet> sheets = new ArrayList<>();
 
    @SExprSymbol("sheet_instances")
-   private List<SheetInstance> sheetInstance;
+   private List<SheetInstance> sheetInstance = new ArrayList<>();
 
    @SExprSymbol("embedded_fonts")
    private boolean embeddedFonts;
 
    @SExprSymbol("symbol_instances")
-   private List<SheetInstance> symbolInstances; // ?????
+   private List<SheetInstance> symbolInstances = new ArrayList<>(); // ?????
 
    @SExprSymbol("netclass_flag")
-   private List<NetclassFlag> netclassFlag;
+   private List<NetclassFlag> netclassFlag = new ArrayList<>();
 
    @SExprSymbol("net_chain")
-   private List<NetChain> netChains;
+   private List<NetChain> netChains = new ArrayList<>();
 
    // ------------------------------------
    @SExprSymbol("group")
-   private List<Group> group;
+   private List<Group> group = new ArrayList<>();
 
 }

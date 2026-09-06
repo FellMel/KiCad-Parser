@@ -15,6 +15,7 @@
  */
 package de.parresum.kicad.parser.eescheme.label;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprModel;
@@ -54,7 +55,7 @@ public class GlobalLabel extends AbstractLabel {
     * inter-sheet reference.
     */
    @SExprSymbol("property")
-   private List<Property> properties;
+   private List<Property> properties = new ArrayList<>();
 
    /**
     * The shape attribute defines the way the global label is drawn.

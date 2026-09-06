@@ -15,6 +15,7 @@
  */
 package de.parresum.kicad.parser.eescheme.label;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprSymbol;
@@ -38,6 +39,6 @@ import lombok.Setter;
 public class Label extends AbstractLabel {
 
    @SExprSymbol("property")
-   private List<Property> properties;
+   private List<Property> properties = new ArrayList<>();
 
 }
