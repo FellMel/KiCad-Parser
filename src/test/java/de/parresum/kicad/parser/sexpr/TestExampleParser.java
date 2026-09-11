@@ -18,16 +18,36 @@ package de.parresum.kicad.parser.sexpr;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.Arrays;
 
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 import de.parresum.kicad.parser.eescheme.Schematic;
 
 public class TestExampleParser {
    @Test
+   @Order(1)
+   public void testPrepare() throws IOException {
+      final File srcDir = new File("src/test/resources/example");
+      final File destDir = new File("target/test/exampleKopie");
+
+      destDir.mkdirs();
+
+      final File[] listFiles = srcDir.listFiles();
+      for (final File file : listFiles) {
+         final File toFile = new File(destDir, file.getName());
+         Files.copy(file.toPath(), toFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+      }
+
+   }
+
+   @Test
+   @Order(1)
    public void testParseAll() throws Exception {
-      final File dir = new File("src/test/resources/exampleKopie");
+      final File dir = new File("target/test/exampleKopie");
 
       final File[] listFiles = dir.listFiles();
       Arrays.sort(listFiles);
