@@ -15,6 +15,7 @@
  */
 package de.parresum.kicad.parser.library;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.parresum.kicad.parser.annotations.SExprSymbol;
@@ -40,6 +41,6 @@ public class Library {
     * A list of 0 or more symbols.
     */
    @SExprSymbol("symbol")
-   private List<LibSymbol> symbols;
+   private List<LibSymbol> symbols = new ArrayList<>();
 
 }
